@@ -3,7 +3,7 @@ package co.com.sofka.model.usuario.valueobjectuser;
 import java.util.Objects;
 
 public class Apellido {
-    private String valor;
+    private final String valor;
 
     public Apellido(String valor) {
         this.valor = Objects.requireNonNull(valor,"el apellido es requerido");
@@ -17,10 +17,6 @@ public class Apellido {
 
     public String getValor() {
         return valor;
-    }
-
-    public void setValor(String valor) {
-        this.valor = valor;
     }
 
     @Override

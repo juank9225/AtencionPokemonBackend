@@ -3,7 +3,7 @@ package co.com.sofka.model.usuario.valueobjectuser;
 import java.util.Objects;
 
 public class Identificacion {
-    private Long valor;
+    private final Long valor;
 
     public Identificacion(Long valor) {
         this.valor = valor;
@@ -11,10 +11,6 @@ public class Identificacion {
 
     public Long getValor() {
         return valor;
-    }
-
-    public void setValor(Long valor) {
-        this.valor = valor;
     }
 
     @Override

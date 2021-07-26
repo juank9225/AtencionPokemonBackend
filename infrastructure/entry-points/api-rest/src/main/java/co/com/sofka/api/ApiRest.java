@@ -31,4 +31,9 @@ public class ApiRest {
         return createMascotaUseCase.crearMascota(mascotaPokemon);
     }
 
+    @GetMapping(path = "/listar/pokemones")
+    public List<MascotaPokemon> listarPokemones(){
+        return createMascotaUseCase.listarPokemones();
+    }
+
 }
