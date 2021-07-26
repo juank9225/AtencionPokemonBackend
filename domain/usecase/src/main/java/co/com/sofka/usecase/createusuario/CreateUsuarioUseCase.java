@@ -3,6 +3,9 @@ package co.com.sofka.usecase.createusuario;
 import co.com.sofka.model.usuario.Usuario;
 import co.com.sofka.model.usuario.gateways.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+
 @RequiredArgsConstructor
 public class CreateUsuarioUseCase {
 
@@ -10,5 +13,9 @@ public class CreateUsuarioUseCase {
 
     public Usuario crearUsuario(Usuario usuario){
         return usuarioRepository.crearUsuario(usuario);
+    }
+
+    public List<Usuario> listarUsuarios(){
+        return usuarioRepository.listarUsuarios();
     }
 }

@@ -5,5 +5,5 @@ import co.com.sofka.model.usuario.valueobjectuser.Identificacion;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.QueryByExampleExecutor;
 
-public interface UsuarioMongoDBRepository extends MongoRepository<Usuario, Identificacion> , QueryByExampleExecutor<Usuario> {
+public interface UsuarioMongoDBRepository extends MongoRepository<Usuario, String> , QueryByExampleExecutor<Usuario> {
 }

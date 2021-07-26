@@ -2,13 +2,14 @@ package co.com.sofka.mongo;
 
 import co.com.sofka.model.usuario.Usuario;
 import co.com.sofka.model.usuario.gateways.UsuarioRepository;
-import co.com.sofka.model.usuario.valueobjectuser.Identificacion;
 import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
-public class UsuarioMongoRepositoryAdapter extends AdapterOperations<Usuario, Usuario, Identificacion, UsuarioMongoDBRepository>
+public class UsuarioMongoRepositoryAdapter extends AdapterOperations<Usuario, Usuario, String, UsuarioMongoDBRepository>
 implements UsuarioRepository
 {
 
@@ -24,5 +25,10 @@ implements UsuarioRepository
     @Override
     public Usuario crearUsuario(Usuario usuario) {
         return this.repository.save(usuario);
+    }
+
+    @Override
+    public List<Usuario> listarUsuarios() {
+        return this.repository.findAll();
     }
 }
