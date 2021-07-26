@@ -6,6 +6,8 @@ import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class MascotaMongoRepositoryAdapter extends AdapterOperations<MascotaPokemon, MascotaPokemon, String, MascotaMongoDBRepository>
 implements MascotaPokemonRepository
@@ -23,5 +25,10 @@ implements MascotaPokemonRepository
     @Override
     public MascotaPokemon crearMascota(MascotaPokemon mascotaPokemon) {
         return this.repository.save(mascotaPokemon);
+    }
+
+    @Override
+    public List<MascotaPokemon> listarPokemones() {
+        return this.repository.findAll();
     }
 }

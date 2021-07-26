@@ -3,7 +3,7 @@ package co.com.sofka.model.usuario.valueobjectuser;
 import java.util.Objects;
 
 public class Correo {
-    private String valor;
+    private final String valor;
 
     public Correo(String valor) {
         this.valor = Objects.requireNonNull(valor,"el correo es requerido");
@@ -14,10 +14,6 @@ public class Correo {
 
     public String getValor() {
         return valor;
-    }
-
-    public void setValor(String valor) {
-        this.valor = valor;
     }
 
     @Override
