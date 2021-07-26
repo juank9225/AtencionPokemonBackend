@@ -1,6 +1,8 @@
 package co.com.sofka.config;
 
+import co.com.sofka.model.mascotapokemon.gateways.MascotaPokemonRepository;
 import co.com.sofka.model.usuario.gateways.UsuarioRepository;
+import co.com.sofka.usecase.createmascota.CreateMascotaUseCase;
 import co.com.sofka.usecase.createusuario.CreateUsuarioUseCase;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -15,5 +17,9 @@ import org.springframework.context.annotation.FilterType;
 public class UseCasesConfig {
         public CreateUsuarioUseCase crear(UsuarioRepository usuarioRepository){
                 return new CreateUsuarioUseCase(usuarioRepository);
+        }
+
+        public CreateMascotaUseCase crearMascota(MascotaPokemonRepository mascotaPokemonRepository){
+                return new CreateMascotaUseCase(mascotaPokemonRepository);
         }
 }
