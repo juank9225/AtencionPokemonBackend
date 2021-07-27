@@ -3,37 +3,88 @@
     {
       "id": "60ff4ac86ddbf248b250db71",
       "fechaConsulta": {
-          "valor": "26/07/2021"
+        "valor": "26/07/2021"
       },
       "causaEnfermedad": {
-          "valor": "pelea con pokemon agua"
+        "valor": "pelea con pokemon agua"
       },
       "sintomas": {
-          "valor": "dolores agudos en las manos y pies"
+        "valor": "dolores agudos en las manos y pies"
       },
       "estadoRevision": {
-          "valor": false
+        "valor": false
       },
       "idUsuario": "250fe715-88d4-4c18-95e7-62a6a097803a",
       "idMascotaPokemon": "60ff293050f02053dd8bac3l"
-  },
-  {
-    "id": "60ff4ac86ddbf248b250db77",
-    "fechaConsulta": {
+    },
+    {
+      "id": "60ff4ac86ddbf248b250db77",
+      "fechaConsulta": {
         "valor": "27/07/2021"
-    },
-    "causaEnfermedad": {
+      },
+      "causaEnfermedad": {
         "valor": "Comio Algo q no era"
-    },
-    "sintomas": {
+      },
+      "sintomas": {
         "valor": "dolor estomagal, bomito y diarrea"
-    },
-    "estadoRevision": {
+      },
+      "estadoRevision": {
         "valor": false
+      },
+      "idUsuario": "250fe715-88d4-4c18-95e7-62a6a097803r",
+      "idMascotaPokemon": "60ff293050f02053dd8bac3b"
     },
-    "idUsuario": "250fe715-88d4-4c18-95e7-62a6a097803r",
-    "idMascotaPokemon": "60ff293050f02053dd8bac3b"
-}
+    {
+      "id": "60ff4763456348550db71",
+      "fechaConsulta": {
+        "valor": "30/07/2021"
+      },
+      "causaEnfermedad": {
+        "valor": "Pelea contra un moltres "
+      },
+      "sintomas": {
+        "valor": "No despierta"
+      },
+      "estadoRevision": {
+        "valor": false
+      },
+      "idUsuario": "250fe715-88d4-4c18-95e7-62a6a097803b",
+      "idMascotaPokemon": "6034234546555c3a"
+    },
+    {
+      "id": "60ff4ac86ddbwe23b71",
+      "fechaConsulta": {
+        "valor": "28/07/2021"
+      },
+      "causaEnfermedad": {
+        "valor": "Pelea con pokemon de fuego"
+      },
+      "sintomas": {
+        "valor": "Baja poder en ataques de onda"
+      },
+      "estadoRevision": {
+        "valor": false
+      },
+      "idUsuario": "250fe715-88d4-4c18-95e7-62a6hgerfbher",
+      "idMascotaPokemon": "60ff3456780f02053dd8bac3a"
+    },
+    {
+      "id": "60ff4ac455678b250db77",
+      "fechaConsulta": {
+        "valor": "28/07/2021"
+      },
+      "causaEnfermedad": {
+        "valor": "Se comio unas ramas"
+      },
+      "sintomas": {
+        "valor": "Se ve palido"
+      },
+      "estadoRevision": {
+        "valor": false
+      },
+      "idUsuario": "250fe715-88d4-4c18-95e7-62a6a097803r",
+      "idMascotaPokemon": "60ewr34234546555c3a"
+    }
   ],
   "usuarios": [
     {
@@ -57,19 +108,19 @@
     {
       "id": "250fe715-88d4-4c18-95e7-62a6a097803b",
       "nombre": {
-        "valor": "juanS"
+        "valor": "Santiago "
       },
       "apellido": {
-        "valor": "salcedo"
+        "valor": "Mejia"
       },
       "telefono": {
-        "valor": "318417353"
+        "valor": "3183565753"
       },
       "profesion": {
-        "valor": "maestro pokimon"
+        "valor": "Maestro pokemon"
       },
       "correo": {
-        "valor": "juanks9225@gmail.com"
+        "valor": "SantyM19@gmail.com"
       }
     },
     {
@@ -89,27 +140,46 @@
       "correo": {
         "valor": "anahernndez@gmail.com"
       }
+    },
+    {
+      "id": "250fe715-88d4-4c18-95e7-62a6hgerfbher",
+      "nombre": {
+        "valor": "Oscar"
+      },
+      "apellido": {
+        "valor": "Lopera"
+      },
+      "telefono": {
+        "valor": "343545388"
+      },
+      "profesion": {
+        "valor": "Maestro pokemon"
+      },
+      "correo": {
+        "valor": "oscarlopera1345@gmail.com"
+      }
     }
   ],
+
   "pokemon": [
     {
       "id": "60ff293050f02053dd8bac3b",
       "identificacion": {
-          "valor": 1235554
+        "valor": 1235554
       },
       "nombre": {
-          "valor": "Bolbasor"
+        "valor": "Bulbasaur"
       },
       "raza": {
-          "valor": "Bulbasaur"
+        "valor": "Bulbasaur"
       },
       "tipo": [
-          {
-              "valor": "planta"
-          }
+        {
+          "valor": "planta"
+        }
       ],
       "habilidad": {
-          "valor": "Lanzar plantas"
+        "valor": "Lanzar plantas"
       }
     },
     {
@@ -125,11 +195,91 @@
       },
       "tipo": [
         {
-            "valor": "fuego"
+          "valor": "fuego"
         }
       ],
       "habilidad": {
         "valor": "Lanzar fuego"
+      }
+    },
+    {
+      "id": "60ff3456780f02053dd8bac3a",
+      "identificacion": {
+        "valor": 1235554
+      },
+      "nombre": {
+        "valor": "Yasuo"
+      },
+      "raza": {
+        "valor": "Magneton"
+      },
+      "tipo": [
+        {
+          "valor": "Electrico y acero"
+        }
+      ],
+      "habilidad": {
+        "valor": "Genera potentes ondas de radio"
+      }
+    },
+    {
+      "id": "60ff34562344555c3a",
+      "identificacion": {
+        "valor": 1235554
+      },
+      "nombre": {
+        "valor": "Xion"
+      },
+      "raza": {
+        "valor": "Wartortle"
+      },
+      "tipo": [
+        {
+          "valor": "Agua"
+        }
+      ],
+      "habilidad": {
+        "valor": "Torrente"
+      }
+    },
+    {
+      "id": "6034234546555c3a",
+      "identificacion": {
+        "valor": 1235554
+      },
+      "nombre": {
+        "valor": "Amateratsu"
+      },
+      "raza": {
+        "valor": "Snorlax"
+      },
+      "tipo": [
+        {
+          "valor": "Normal"
+        }
+      ],
+      "habilidad": {
+        "valor": "Sebo, inmunidad"
+      }
+    },
+    {
+      "id": "60ewr34234546555c3a",
+      "identificacion": {
+        "valor": 122335554
+      },
+      "nombre": {
+        "valor": "Togepi"
+      },
+      "raza": {
+        "valor": "Togepi"
+      },
+      "tipo": [
+        {
+          "valor": "Hada"
+        }
+      ],
+      "habilidad": {
+        "valor": "Entusiasmo"
       }
     }
   ]
