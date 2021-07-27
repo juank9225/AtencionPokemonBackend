@@ -16,7 +16,24 @@
       },
       "idUsuario": "250fe715-88d4-4c18-95e7-62a6a097803a",
       "idMascotaPokemon": "60ff293050f02053dd8bac3l"
-  }
+  },
+  {
+    "id": "60ff4ac86ddbf248b250db77",
+    "fechaConsulta": {
+        "valor": "27/07/2021"
+    },
+    "causaEnfermedad": {
+        "valor": "Comio Algo q no era"
+    },
+    "sintomas": {
+        "valor": "dolor estomagal, bomito y diarrea"
+    },
+    "estadoRevision": {
+        "valor": false
+    },
+    "idUsuario": "250fe715-88d4-4c18-95e7-62a6a097803r",
+    "idMascotaPokemon": "60ff293050f02053dd8bac3b"
+}
   ],
   "usuarios": [
     {
