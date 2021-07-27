@@ -27,18 +27,45 @@ class Consults extends React.Component {
     clearInterval(this.intervalId);
   }
 
+  
+
   fetchData = async () => {
     this.setState({ loading: true, error: null });
 
     try {
       const data = await api.consults.list()
 
-      const userID = await api.usuarios.read(data[0].idUsuario);
-      const pokeID = await api.pokemon.read(data[0].idMascotaPokemon);
-      //console.log(pokeID)
+      //const userID = await api.usuarios.read(data[0].idUsuario);
+      //const pokeID = await api.pokemon.read(data[0].idMascotaPokemon);
+      
+      const user = await api.usuarios.list();
+      const poke = await api.pokemon.list();
+      var userID
+      var pokemonID
+      var userid
+      var consultaidU
+      var consultaidP
+      var pokemonid
+
+      //console.log(user)
 
       const datamorfis = data.map((consult) => {
-        return [consult , userID , pokeID]
+        function filterByID(value, index, array) {
+          consultaidU = consult.idUsuario
+          userid = value.id 
+          return userid === consultaidU;
+        }
+
+        function filterByIDP(value, index, array) {
+          consultaidP = consult.idMascotaPokemon
+          pokemonid = value.id 
+          return pokemonid === consultaidP;
+        }
+
+        userID = user.filter(filterByID)
+        pokemonID = poke.filter(filterByIDP)
+
+        return [consult , userID[0] , pokemonID[0]]
       })
       console.log(datamorfis)
 
