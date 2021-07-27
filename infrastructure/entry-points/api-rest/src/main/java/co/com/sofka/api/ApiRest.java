@@ -48,5 +48,4 @@ public class ApiRest {
     public List<Consulta> listarConsultas(){
         return createConsultaUseCase.listarConsultas();
     }
-
 }
