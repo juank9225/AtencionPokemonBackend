@@ -1,7 +1,7 @@
 .Navbar {
   width: 100%;
   padding: 0.5rem 0;
-  background-color: #1c3643;
+  background-color: rgb(29, 30, 51);
 }
 
 .Navbar__brand {
@@ -18,4 +18,7 @@
 
 .Navbar__brand-logo {
   margin-right: 0.5rem;
+  height: 60px;
 }
+
+
