@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/Consults.css';
-import confLogo from '../images/badge-header.svg';
+import confLogo from '../images/descarga.png';
 import ConsultList from '../components/ConsultList';
-import PokemonList from '../components/PokemonList';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import MiniLoader from '../components/MiniLoader';

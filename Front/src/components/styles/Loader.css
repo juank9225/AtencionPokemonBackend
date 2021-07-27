@@ -1,17 +1,24 @@
 .lds-grid {
   display: inline-block;
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
 }
 
 .lds-grid div {
   position: absolute;
-  width: 13px;
-  height: 13px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: #000;
+  background: rgba(17, 17, 17, 0.644);
   animation: lds-grid 1.2s linear infinite;
+}
+
+.circulo{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .lds-grid div:nth-child(1) {
@@ -22,49 +29,49 @@
 
 .lds-grid div:nth-child(2) {
   top: 6px;
-  left: 26px;
+  left: 36px;
   animation-delay: -0.4s;
 }
 
 .lds-grid div:nth-child(3) {
   top: 6px;
-  left: 45px;
+  left: 66px;
   animation-delay: -0.8s;
 }
 
 .lds-grid div:nth-child(4) {
-  top: 26px;
+  top: 36px;
   left: 6px;
   animation-delay: -0.4s;
 }
 
 .lds-grid div:nth-child(5) {
-  top: 26px;
-  left: 26px;
+  top: 36px;
+  left: 36px;
   animation-delay: -0.8s;
 }
 
 .lds-grid div:nth-child(6) {
-  top: 26px;
-  left: 45px;
+  top: 36px;
+  left: 66px;
   animation-delay: -1.2s;
 }
 
 .lds-grid div:nth-child(7) {
-  top: 45px;
+  top: 66px;
   left: 6px;
   animation-delay: -0.8s;
 }
 
 .lds-grid div:nth-child(8) {
-  top: 45px;
-  left: 26px;
+  top: 66px;
+  left: 36px;
   animation-delay: -1.2s;
 }
 
 .lds-grid div:nth-child(9) {
-  top: 45px;
-  left: 45px;
+  top: 66px;
+  left: 66px;
   animation-delay: -1.6s;
 }
 
