@@ -1,7 +1,7 @@
 package co.com.sofka.usecase.createmascota;
 
-import co.com.sofka.model.mascotapokemon.MascotaPokemon;
-import co.com.sofka.model.mascotapokemon.gateways.MascotaPokemonRepository;
+import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
+import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemonRepository;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

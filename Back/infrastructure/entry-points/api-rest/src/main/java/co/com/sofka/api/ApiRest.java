@@ -1,7 +1,7 @@
 package co.com.sofka.api;
 import co.com.sofka.model.consulta.Consulta;
-import co.com.sofka.model.mascotapokemon.MascotaPokemon;
-import co.com.sofka.model.usuario.Usuario;
+import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
+import co.com.sofka.model.consulta.entity.usuario.Usuario;
 import co.com.sofka.usecase.createconsulta.CreateConsultaUseCase;
 import co.com.sofka.usecase.createmascota.CreateMascotaUseCase;
 import co.com.sofka.usecase.createusuario.CreateUsuarioUseCase;

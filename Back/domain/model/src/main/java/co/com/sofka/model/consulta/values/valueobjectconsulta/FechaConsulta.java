@@ -1,14 +1,14 @@
-package co.com.sofka.model.consulta.valueobjectconsulta;
+package co.com.sofka.model.consulta.values.valueobjectconsulta;
 
 import java.util.Objects;
 
-public class CausaEnfermedad {
+public class FechaConsulta {
     private final String valor;
 
-    public CausaEnfermedad(String valor) {
-        this.valor = Objects.requireNonNull(valor,"la causa de la enfermedad es requerida");
+    public FechaConsulta(String valor) {
+        this.valor = Objects.requireNonNull(valor,"la fecha es requerido");
         if (this.valor.isEmpty()){
-            throw new IllegalArgumentException("el campo de la causa de la enfermedad no puede ser vacia");
+            throw new IllegalArgumentException("el campo fecha no puede ser vacio");
         }
     }
 
@@ -20,7 +20,7 @@ public class CausaEnfermedad {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CausaEnfermedad that = (CausaEnfermedad) o;
+        FechaConsulta that = (FechaConsulta) o;
         return Objects.equals(valor, that.valor);
     }
 

@@ -1,7 +1,7 @@
 package co.com.sofka.mongo;
 
-import co.com.sofka.model.usuario.Usuario;
-import co.com.sofka.model.usuario.gateways.UsuarioRepository;
+import co.com.sofka.model.consulta.entity.usuario.Usuario;
+import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
 import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;

@@ -1,6 +1,6 @@
-package co.com.sofka.model.usuario.gateways;
+package co.com.sofka.model.consulta.entity.usuario.gateways;
 
-import co.com.sofka.model.usuario.Usuario;
+import co.com.sofka.model.consulta.entity.usuario.Usuario;
 
 import java.util.List;
 

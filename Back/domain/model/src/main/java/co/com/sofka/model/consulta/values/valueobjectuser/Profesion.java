@@ -1,4 +1,4 @@
-package co.com.sofka.model.usuario.valueobjectuser;
+package co.com.sofka.model.consulta.values.valueobjectuser;
 
 import java.util.Objects;
 

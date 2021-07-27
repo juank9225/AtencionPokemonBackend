@@ -1,4 +1,4 @@
-package co.com.sofka.model.consulta.valueobjectconsulta;
+package co.com.sofka.model.consulta.values.valueobjectconsulta;
 
 import java.util.Objects;
 

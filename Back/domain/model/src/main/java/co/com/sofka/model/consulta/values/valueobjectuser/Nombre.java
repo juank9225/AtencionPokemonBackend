@@ -1,4 +1,4 @@
-package co.com.sofka.model.mascotapokemon.valueobjectmascota;
+package co.com.sofka.model.consulta.values.valueobjectuser;
 
 import java.util.Objects;
 
@@ -23,8 +23,8 @@ public class Nombre {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Nombre nombre = (Nombre) o;
-        return Objects.equals(valor, nombre.valor);
+        Nombre nombre1 = (Nombre) o;
+        return Objects.equals(valor, nombre1.valor);
     }
 
     @Override

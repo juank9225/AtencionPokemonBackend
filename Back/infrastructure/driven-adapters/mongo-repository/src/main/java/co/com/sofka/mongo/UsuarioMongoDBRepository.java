@@ -1,7 +1,6 @@
 package co.com.sofka.mongo;
 
-import co.com.sofka.model.usuario.Usuario;
-import co.com.sofka.model.usuario.valueobjectuser.Identificacion;
+import co.com.sofka.model.consulta.entity.usuario.Usuario;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.QueryByExampleExecutor;
 

@@ -1,17 +1,17 @@
-package co.com.sofka.model.mascotapokemon.valueobjectmascota;
+package co.com.sofka.model.consulta.values.valueobjectmascota;
 
 import java.util.Objects;
 
-public class Raza {
+public class Tipo {
     private final String valor;
 
-    public Raza(String valor) {
-        this.valor = Objects.requireNonNull(valor,"la raza es requerida");
+    public Tipo(String valor) {
+        this.valor = Objects.requireNonNull(valor,"el tipo de pokemon es requerido");
         if (this.valor.isEmpty()){
-            throw new IllegalArgumentException("El campo raza no puede ser vacio");
+            throw new IllegalArgumentException("el tipo de pokemon no puede ser vacio");
         }
         if (this.valor.length() < 3 || this.valor.length() >= 50){
-            throw new IllegalArgumentException("La raza debe terner mas de 2 caracteres y menos de 50 caracteres");
+            throw new IllegalArgumentException("el tipo de pokemon debe terner mas de 2 caracteres y menos de 50 caracteres");
         }
     }
 
@@ -23,8 +23,8 @@ public class Raza {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Raza raza = (Raza) o;
-        return Objects.equals(valor, raza.valor);
+        Tipo tipo = (Tipo) o;
+        return Objects.equals(valor, tipo.valor);
     }
 
     @Override

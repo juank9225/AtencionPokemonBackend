@@ -1,14 +1,14 @@
-package co.com.sofka.model.consulta.valueobjectconsulta;
+package co.com.sofka.model.consulta.values.valueobjectuser;
 
 import java.util.Objects;
 
-public class FechaConsulta {
+public class Telefono {
     private final String valor;
 
-    public FechaConsulta(String valor) {
-        this.valor = Objects.requireNonNull(valor,"la fecha es requerido");
+    public Telefono(String valor) {
+        this.valor = Objects.requireNonNull(valor,"el telefono es obligatorio");
         if (this.valor.isEmpty()){
-            throw new IllegalArgumentException("el campo fecha no puede ser vacio");
+            throw new IllegalArgumentException("el telefono no puede ser vacia");
         }
     }
 
@@ -20,8 +20,8 @@ public class FechaConsulta {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        FechaConsulta that = (FechaConsulta) o;
-        return Objects.equals(valor, that.valor);
+        Telefono telefono1 = (Telefono) o;
+        return Objects.equals(valor, telefono1.valor);
     }
 
     @Override

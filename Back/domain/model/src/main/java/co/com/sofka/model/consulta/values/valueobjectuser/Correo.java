@@ -1,14 +1,14 @@
-package co.com.sofka.model.usuario.valueobjectuser;
+package co.com.sofka.model.consulta.values.valueobjectuser;
 
 import java.util.Objects;
 
-public class Telefono {
+public class Correo {
     private final String valor;
 
-    public Telefono(String valor) {
-        this.valor = Objects.requireNonNull(valor,"el telefono es obligatorio");
+    public Correo(String valor) {
+        this.valor = Objects.requireNonNull(valor,"el correo es requerido");
         if (this.valor.isEmpty()){
-            throw new IllegalArgumentException("el telefono no puede ser vacia");
+            throw new IllegalArgumentException("el correo no puede ser vacio");
         }
     }
 
@@ -20,8 +20,8 @@ public class Telefono {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Telefono telefono1 = (Telefono) o;
-        return Objects.equals(valor, telefono1.valor);
+        Correo correo1 = (Correo) o;
+        return Objects.equals(valor, correo1.valor);
     }
 
     @Override

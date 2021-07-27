@@ -1,7 +1,7 @@
 package co.com.sofka.mongo;
 
-import co.com.sofka.model.mascotapokemon.MascotaPokemon;
-import co.com.sofka.model.mascotapokemon.gateways.MascotaPokemonRepository;
+import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
+import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemonRepository;
 import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package co.com.sofka.model.mascotapokemon.valueobjectmascota;
+package co.com.sofka.model.consulta.values.valueobjectuser;
 
 import java.util.Objects;
 

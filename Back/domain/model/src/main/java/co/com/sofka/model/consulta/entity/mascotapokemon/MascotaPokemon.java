@@ -1,5 +1,5 @@
-package co.com.sofka.model.mascotapokemon;
-import co.com.sofka.model.mascotapokemon.valueobjectmascota.*;
+package co.com.sofka.model.consulta.entity.mascotapokemon;
+import co.com.sofka.model.consulta.values.valueobjectmascota.*;
 import lombok.Builder;
 import lombok.Data;
 

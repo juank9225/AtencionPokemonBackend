@@ -1,5 +1,5 @@
-package co.com.sofka.model.usuario;
-import co.com.sofka.model.usuario.valueobjectuser.*;
+package co.com.sofka.model.consulta.entity.usuario;
+import co.com.sofka.model.consulta.values.valueobjectuser.*;
 import lombok.Builder;
 import lombok.Data;
 
