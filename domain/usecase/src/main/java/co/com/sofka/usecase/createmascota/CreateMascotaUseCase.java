@@ -13,7 +13,7 @@ public class CreateMascotaUseCase {
     public MascotaPokemon crearMascota(MascotaPokemon mascotaPokemon){
         return mascotaPokemonRepository.crearMascota(mascotaPokemon);
     }
-
+  
     public List<MascotaPokemon> listarPokemones(){
         return mascotaPokemonRepository.listarPokemones();
     }
