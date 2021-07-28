@@ -27,13 +27,13 @@ public class DoctorMapper {
 
     public DoctorDTO fromModel(Doctorpokemon doctorpokemon){
         DoctorDTO doctorDTO = new DoctorDTO();
-        doctorDTO.setId(doctorDTO.getId());
-        doctorDTO.setIdentificacion(doctorDTO.getIdentificacion());
-        doctorDTO.setNombre(doctorDTO.getNombre());
-        doctorDTO.setApellido(doctorDTO.getApellido());
-        doctorDTO.setTelefono(doctorDTO.getTelefono());
-        doctorDTO.setCorreo(doctorDTO.getCorreo());
-        doctorDTO.setEspecialidad(doctorDTO.getEspecialidad());
+        doctorDTO.setId(doctorpokemon.getId());
+        doctorDTO.setIdentificacion(doctorpokemon.getIdentificacion());
+        doctorDTO.setNombre(doctorpokemon.getNombre());
+        doctorDTO.setApellido(doctorpokemon.getApellido());
+        doctorDTO.setTelefono(doctorpokemon.getTelefono());
+        doctorDTO.setCorreo(doctorpokemon.getCorreo());
+        doctorDTO.setEspecialidad(doctorpokemon.getEspecialidad());
         return doctorDTO;
     }
 

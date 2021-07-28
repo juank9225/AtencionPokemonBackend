@@ -24,7 +24,8 @@ public class DoctorDTO {
         this.especialidad = especialidad;
     }
 
-    public DoctorDTO(Nombre nombre, Apellido apellido, Telefono telefono, Correo correo, Especialidad especialidad) {
+    public DoctorDTO(Identificacion identificacion, Nombre nombre, Apellido apellido, Telefono telefono, Correo correo, Especialidad especialidad) {
+        this.identificacion = identificacion;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
