@@ -8,7 +8,6 @@ import Consult from '../components/Consult';
 
 function ConsultDetails(props) {
   const consult = props.consult;
-  console.log(props.consult[1].nombre.valor)
   return (
     <div>
       <div className="BadgeDetails__hero">
@@ -49,9 +48,25 @@ function ConsultDetails(props) {
               <div>
                 <Link
                   className="btn btn-primary mb-4"
-                  to={`/consult/${consult[1].id}/edit`}
+                  to={`/consults/${consult[1].id}/edituser/${consult[0].id}`}
                 >
-                  Edit
+                  Editar Usuario
+                </Link>
+              </div>
+              <div>
+                <Link
+                  className="btn btn-primary mb-4"
+                  to={`/consults/${consult[2].id}/editpokemon/${consult[0].id}`}
+                >
+                  Editar Pokemon
+                </Link>
+              </div>
+              <div>
+                <Link
+                  className="btn btn-primary mb-4"
+                  to={`/consults/${consult[0].id}/editconsult`}
+                >
+                  Editar Consulta
                 </Link>
               </div>
             </div>

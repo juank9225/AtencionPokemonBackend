@@ -54,7 +54,6 @@ class BadgeDetailsContainer extends React.Component {
         onCloseModal={this.handleCloseModal}
         onOpenModal={this.handleOpenModal}
         modalIsOpen={this.state.modalIsOpen}
-        onDeleteBadge={this.handleDeleteBadge}
         consult={this.state.data}
       />
     );

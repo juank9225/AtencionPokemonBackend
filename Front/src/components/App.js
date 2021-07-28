@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Consults from '../pages/Consults';
 import ConsultNew from '../pages/ConsultNew';
 import ConsultDetails from '../pages/ConsultDetailsContainer';
+import UserEdit from '../pages/UserEdit';
 /*
 import BadgeDetails from '../pages/BadgeDetailsContainer';
 import BadgeEdit from '../pages/BadgeEdit';
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/consults" component={Consults} />
         <Route exact path="/consults/usernew" component={ConsultNew} />
         <Route exact path="/consults/:consultId" component={ConsultDetails} />
+        <Route exact path="/consults/:userId/edituser/:consultId" component={UserEdit} />
         </Switch>
       </Layout>
     </BrowserRouter>
