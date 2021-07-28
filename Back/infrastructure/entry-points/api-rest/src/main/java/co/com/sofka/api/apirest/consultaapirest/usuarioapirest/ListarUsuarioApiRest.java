@@ -2,7 +2,7 @@ package co.com.sofka.api.apirest.consultaapirest.usuarioapirest;
 
 import co.com.sofka.api.dtos.UsuarioDTO;
 import co.com.sofka.api.mapper.UsuarioMapper;
-import co.com.sofka.usecase.usuario.ListarUsuarioUseCase;
+import co.com.sofka.usecase.consulta.usuario.ListarUsuarioUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

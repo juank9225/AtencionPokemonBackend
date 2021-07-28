@@ -1,7 +1,7 @@
 package co.com.sofka.api.apirest.consultaapirest.mascotaapirest;
 
 import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
-import co.com.sofka.usecase.mascota.ListarMascotaUseCase;
+import co.com.sofka.usecase.consulta.mascota.ListarMascotaUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
