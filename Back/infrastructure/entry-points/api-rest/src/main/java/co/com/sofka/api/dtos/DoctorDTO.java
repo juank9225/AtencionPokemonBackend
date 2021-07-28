@@ -1,6 +1,6 @@
 package co.com.sofka.api.dtos;
 
-import co.com.sofka.model.doctorpokemon.values.*;
+import co.com.sofka.model.atencion.values.valueobjectdoctor.*;
 
 public class DoctorDTO {
     private String id;

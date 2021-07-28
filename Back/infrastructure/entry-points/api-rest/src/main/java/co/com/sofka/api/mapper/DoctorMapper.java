@@ -1,9 +1,7 @@
 package co.com.sofka.api.mapper;
 
 import co.com.sofka.api.dtos.DoctorDTO;
-import co.com.sofka.api.dtos.UsuarioDTO;
-import co.com.sofka.model.consulta.entity.usuario.Usuario;
-import co.com.sofka.model.doctorpokemon.Doctorpokemon;
+import co.com.sofka.model.atencion.entity.doctorpokemon.Doctorpokemon;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

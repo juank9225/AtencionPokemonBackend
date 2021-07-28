@@ -1,4 +1,4 @@
-package co.com.sofka.model.doctorpokemon.values;
+package co.com.sofka.model.atencion.values.valueobjectdoctor;
 
 import java.util.Objects;
 
