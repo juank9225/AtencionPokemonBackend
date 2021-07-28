@@ -2,11 +2,12 @@ package co.com.sofka.api.mapper;
 
 import co.com.sofka.api.dtos.MascotaDTO;
 import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+@Component
 public class MascotaMapper {
 
     public MascotaPokemon fromDTO(MascotaDTO mascotaDTO){

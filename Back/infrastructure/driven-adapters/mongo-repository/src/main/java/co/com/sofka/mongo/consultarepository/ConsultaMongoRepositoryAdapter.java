@@ -32,4 +32,9 @@ public class ConsultaMongoRepositoryAdapter extends AdapterOperations<Consulta,C
     public List<Consulta> listarConsultas() {
         return this.repository.findAll();
     }
+
+    @Override
+    public List<Consulta> listarConsultasActivas(String fecha) {
+        return this.repository.findByFechaConsultaValor(fecha);
+    }
 }
