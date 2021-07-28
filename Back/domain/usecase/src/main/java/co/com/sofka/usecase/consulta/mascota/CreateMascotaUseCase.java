@@ -1,16 +1,15 @@
-package co.com.sofka.usecase.mascota;
+package co.com.sofka.usecase.consulta.mascota;
 
 import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
 import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemonRepository;
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
-
 @RequiredArgsConstructor
-public class ListarMascotaUseCase {
+public class CreateMascotaUseCase {
     private final MascotaPokemonRepository mascotaPokemonRepository;
 
-    public List<MascotaPokemon> listarPokemones(){
-        return mascotaPokemonRepository.listarPokemones();
+    public MascotaPokemon crearMascota(MascotaPokemon mascotaPokemon){
+        return mascotaPokemonRepository.crearMascota(mascotaPokemon);
     }
+
 }

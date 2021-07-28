@@ -1,4 +1,4 @@
-package co.com.sofka.usecase.usuario;
+package co.com.sofka.usecase.consulta.usuario;
 
 import co.com.sofka.model.consulta.entity.usuario.Usuario;
 import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
