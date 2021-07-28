@@ -1,4 +1,4 @@
-package co.com.sofka.mongo;
+package co.com.sofka.mongo.consultarepository;
 
 import co.com.sofka.model.consulta.Consulta;
 import org.springframework.data.mongodb.repository.MongoRepository;

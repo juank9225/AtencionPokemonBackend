@@ -1,4 +1,4 @@
-package co.com.sofka.mongo;
+package co.com.sofka.mongo.usuariorepository;
 
 import co.com.sofka.model.consulta.entity.usuario.Usuario;
 import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;

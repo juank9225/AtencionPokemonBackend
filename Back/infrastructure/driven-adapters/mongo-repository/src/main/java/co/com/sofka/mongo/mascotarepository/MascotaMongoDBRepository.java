@@ -1,4 +1,4 @@
-package co.com.sofka.mongo;
+package co.com.sofka.mongo.mascotarepository;
 
 import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
 import org.springframework.data.mongodb.repository.MongoRepository;

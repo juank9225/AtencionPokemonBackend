@@ -1,10 +1,8 @@
-package co.com.sofka.usecase.createconsulta;
+package co.com.sofka.usecase.consulta;
 
 import co.com.sofka.model.consulta.Consulta;
 import co.com.sofka.model.consulta.gateways.ConsultaRepository;
 import lombok.RequiredArgsConstructor;
-
-import java.util.List;
 
 @RequiredArgsConstructor
 public class CreateConsultaUseCase {
@@ -14,7 +12,4 @@ public class CreateConsultaUseCase {
         return consultaRepository.crearConsulta(consulta);
     }
 
-    public List<Consulta> listarConsultas(){
-        return consultaRepository.listarConsultas();
-    }
 }
