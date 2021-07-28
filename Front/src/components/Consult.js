@@ -1,11 +1,13 @@
 import React from 'react';
 
 import './styles/User.css';
-import logo from '../images/descarga.png';
+import logo from '../images/vulpix.png';
 import Gravatar from './Gravatar';
 
 class Consult extends React.Component {
   render() {
+    console.log(this.props)
+    console.log("ana") 
     return (
       <div className="Badge">
         <div className="Badge__header">
@@ -13,26 +15,26 @@ class Consult extends React.Component {
         </div>
 
         <div className="Badge__section-name">
-          <Gravatar className="Badge__avatar" email={this.props[1].correo} />
+          <Gravatar className="Badge__avatar" email={this.props.correo} />
           <h1>
-            {this.props[1].nombre} <br /> {this.props[1].apellido}
+            {this.props.nombre} <br /> {this.props.apellido}
           </h1>
         </div>
 
         <div className="Badge__section-info">
-          <h3>{this.props[1].profesion}</h3>
-          <div>{this.props[1].telefono}</div>
+          <h3>{this.props.profesion}</h3>
+          <div>{this.props.telefono}</div>
         </div>
 
         <div className="Badge__section-info">
-          <h2>{this.props[2].nombre}</h2>
-          <div>{this.props[2].raza}</div>
+          <h2>{this.props.nombrepok}</h2>
+          <div>{this.props.raza}</div>
         </div>
 
         <div className="Badge__section-info">
-          <h3>{this.props[0].sintomas}</h3>
-          <div>{this.props[0].causaEnfermedad}</div>
-          <div>{this.props[0].fechaConsulta}</div>
+          <h3>{this.props.sintomas}</h3>
+          <div>{this.props.causaEnfermedad}</div>
+          <div>{this.props.fechaConsulta}</div>
         </div>
 
         <div className="Badge__footer">#ConsultorioPokemon</div>

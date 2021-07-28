@@ -65,7 +65,6 @@ function useSearchBadges(consults) {
 
 function ConsultsList(props) {
   const consults = props.consults;
-  console.log(consults)
   const { query, setQuery, filteredBadges } = useSearchBadges(consults);
 
   if (filteredBadges.length === 0) {
@@ -111,7 +110,7 @@ function ConsultsList(props) {
             <li key={consult[0].id}>
               <Link
                 className="text-reset text-decoration-none"
-                to={`/consults/${consult.id}`}
+                to={`/consults/${consult[0].id}`}
               >
                 <ConsultListItem consult={consult} />
               </Link>

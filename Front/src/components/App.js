@@ -5,15 +5,13 @@ import Layout from './Layout';
 import Home from '../pages/Home';
 import Consults from '../pages/Consults';
 import ConsultNew from '../pages/ConsultNew';
+import ConsultDetails from '../pages/ConsultDetailsContainer';
 /*
-import BadgeNew from '../pages/BadgeNew';
 import BadgeDetails from '../pages/BadgeDetailsContainer';
 import BadgeEdit from '../pages/BadgeEdit';
 import NotFound from '../pages/NotFound';*/
 
 /*
-          <Route exact path="/consults/new" component={ConsulstNew} />
-          <Route exact path="/badges/:badgeId" component={BadgeDetails} />
           <Route exact path="/badges/:badgeId/edit" component={BadgeEdit} />
           <Route component={NotFound} />
 */ 
@@ -26,6 +24,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/consults" component={Consults} />
         <Route exact path="/consults/usernew" component={ConsultNew} />
+        <Route exact path="/consults/:consultId" component={ConsultDetails} />
         </Switch>
       </Layout>
     </BrowserRouter>
