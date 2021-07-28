@@ -7,4 +7,5 @@ import java.util.List;
 public interface ConsultaRepository {
     Consulta crearConsulta(Consulta consulta);
     List<Consulta> listarConsultas();
+    List<Consulta> listarConsultasActivas(String fecha);
 }

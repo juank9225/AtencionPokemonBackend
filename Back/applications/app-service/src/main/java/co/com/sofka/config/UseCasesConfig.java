@@ -10,6 +10,7 @@ import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonUseCase;
 import co.com.sofka.usecase.consulta.CreateConsultaUseCase;
 import co.com.sofka.usecase.consulta.ListarConsultaUseCase;
+import co.com.sofka.usecase.consulta.ListarConsultasActivasUseCase;
 import co.com.sofka.usecase.consulta.mascota.CreateMascotaUseCase;
 import co.com.sofka.usecase.consulta.mascota.ListarMascotaUseCase;
 import co.com.sofka.usecase.consulta.usuario.CreateUsuarioUseCase;
@@ -54,5 +55,9 @@ public class UseCasesConfig {
 
         public ListarDoctorPokemonUseCase listarDoctores(DoctorpokemonRepository doctorpokemonRepository){
                 return new ListarDoctorPokemonUseCase(doctorpokemonRepository);
+        }
+
+        public ListarConsultasActivasUseCase listarConsultasActivas(ConsultaRepository consultaRepository){
+                return new ListarConsultasActivasUseCase(consultaRepository);
         }
 }
