@@ -1,4 +1,3 @@
-
 server:
   port: 8080
 spring:
@@ -10,4 +9,4 @@ spring:
     include: null
   data:
     mongodb:
-      uri: "mongodb+srv://desarrollo01:juank9225@cluster0.omffl.mongodb.net/pokemon?retryWrites=true&w=majority"
+      uri: "mongodb://localhost:27017/test"
