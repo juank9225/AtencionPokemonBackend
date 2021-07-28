@@ -1,4 +1,4 @@
-package co.com.sofka.api.apirest.usuarioapirest;
+package co.com.sofka.api.apirest.consultaapirest.usuarioapirest;
 
 import co.com.sofka.api.dtos.UsuarioDTO;
 import co.com.sofka.api.mapper.UsuarioMapper;

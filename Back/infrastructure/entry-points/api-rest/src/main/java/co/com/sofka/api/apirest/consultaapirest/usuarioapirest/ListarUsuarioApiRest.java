@@ -1,8 +1,7 @@
-package co.com.sofka.api.apirest.usuarioapirest;
+package co.com.sofka.api.apirest.consultaapirest.usuarioapirest;
 
 import co.com.sofka.api.dtos.UsuarioDTO;
 import co.com.sofka.api.mapper.UsuarioMapper;
-import co.com.sofka.model.consulta.entity.usuario.Usuario;
 import co.com.sofka.usecase.usuario.ListarUsuarioUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;

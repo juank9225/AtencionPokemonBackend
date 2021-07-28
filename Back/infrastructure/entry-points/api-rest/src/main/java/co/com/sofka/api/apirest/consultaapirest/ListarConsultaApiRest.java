@@ -1,5 +1,6 @@
 package co.com.sofka.api.apirest.consultaapirest;
 
+
 import co.com.sofka.model.consulta.Consulta;
 import co.com.sofka.usecase.consulta.ListarConsultaUseCase;
 import lombok.AllArgsConstructor;

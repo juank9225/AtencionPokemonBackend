@@ -1,4 +1,4 @@
-package co.com.sofka.api.apirest.mascotaapirest;
+package co.com.sofka.api.apirest.consultaapirest.mascotaapirest;
 
 import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
 import co.com.sofka.usecase.mascota.ListarMascotaUseCase;
