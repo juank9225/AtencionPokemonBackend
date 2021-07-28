@@ -175,6 +175,30 @@
       "profesion": "MasterChief",
       "telefono": "3222115185",
       "id": "FudoQnY"
+    },
+    {
+      "nombre": "Oscar ",
+      "apellido": "Lopera",
+      "correo": "oscarlopera@gmail.com",
+      "profesion": "Entrenador Pokemon",
+      "telefono": "312345456",
+      "id": "GcVybPn"
+    },
+    {
+      "nombre": "",
+      "apellido": "",
+      "correo": "",
+      "profesion": "",
+      "telefono": "",
+      "id": "FdEBnFs"
+    },
+    {
+      "nombre": "",
+      "apellido": "",
+      "correo": "",
+      "profesion": "",
+      "telefono": "",
+      "id": "EKzXZIl"
     }
   ],
   "pokemon": [

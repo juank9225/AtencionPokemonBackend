@@ -100,7 +100,7 @@ class Consults extends React.Component {
 
         <div className="Badges__container">
           <div className="Badges__buttons">
-            <Link to="/badges/new" className="btn btn-primary">
+            <Link to="/consults/usernew" className="btn btn-primary">
               New Consult
             </Link>
           </div>
