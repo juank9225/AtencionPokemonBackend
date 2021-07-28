@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './styles/BadgeNew.css';
-import header from '../images/platziconf-logo.svg';
-import Badge from '../components/Badge';
-import BadgeForm from '../components/BadgeForm';
+import './styles/ConsultNew.css';
+import header from '../images/vulpix.png';
+import Badge from '../components/User';
+import BadgeForm from '../components/UserForm';
 import PageLoading from '../components/PageLoading';
 import api from '../api';
 
@@ -12,11 +12,11 @@ class BadgeNew extends React.Component {
     loading: false,
     error: null,
     form: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      jobTitle: '',
-      twitter: '',
+      nombre: '',
+      apellido: '',
+      correo: '',
+      profesion: '',
+      telefono: '',
     },
   };
 
@@ -34,10 +34,10 @@ class BadgeNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.create(this.state.form);
+      await api.usuarios.create(this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/badges');
+      this.props.history.push('/consults');
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -62,17 +62,17 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName={this.state.form.firstName || 'FIRST_NAME'}
-                lastName={this.state.form.lastName || 'LAST_NAME'}
-                twitter={this.state.form.twitter || 'twitter'}
-                jobTitle={this.state.form.jobTitle || 'JOB_TITLE'}
-                email={this.state.form.email || 'EMAIL'}
+                nombre={this.state.form.nombre || 'Nombre'}
+                apellido={this.state.form.apellido || 'Apellido'}
+                telefono={this.state.form.telefono || 'Telefono'}
+                profesion={this.state.form.profesion || 'Profesion'}
+                correo={this.state.form.correo || 'Email'}
                 avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
               />
             </div>
 
             <div className="col-6">
-              <h1>New Attendant</h1>
+              <h1>Nuevo Usuario</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}

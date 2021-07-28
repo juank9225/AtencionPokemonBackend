@@ -158,9 +158,25 @@
       "correo": {
         "valor": "oscarlopera1345@gmail.com"
       }
+    },
+    {
+      "nombre": "Andres",
+      "apellido": "Rodriguez",
+      "correo": "Andres@jjj.com",
+      "profesion": "MasterChief",
+      "telefono": "3222115185",
+      "Profesion": "1",
+      "id": "3hZ2c4C"
+    },
+    {
+      "nombre": "robocop",
+      "apellido": "Rodriguez",
+      "correo": "Andres@jjj.comd",
+      "profesion": "MasterChief",
+      "telefono": "3222115185",
+      "id": "FudoQnY"
     }
   ],
-
   "pokemon": [
     {
       "id": "60ff293050f02053dd8bac3b",
