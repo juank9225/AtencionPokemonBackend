@@ -31,4 +31,9 @@ implements MascotaPokemonRepository
     public List<MascotaPokemon> listarPokemones() {
         return this.repository.findAll();
     }
+
+    @Override
+    public MascotaPokemon obtenerMascota(String id) {
+        return this.repository.findById(id).orElseThrow(()->{throw new IllegalArgumentException("no se encontro la mascota."); });
+    }
 }

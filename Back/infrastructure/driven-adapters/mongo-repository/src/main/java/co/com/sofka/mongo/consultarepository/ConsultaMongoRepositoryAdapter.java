@@ -1,6 +1,7 @@
 package co.com.sofka.mongo.consultarepository;
 
 import co.com.sofka.model.consulta.Consulta;
+import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
 import co.com.sofka.model.consulta.gateways.ConsultaRepository;
 import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
