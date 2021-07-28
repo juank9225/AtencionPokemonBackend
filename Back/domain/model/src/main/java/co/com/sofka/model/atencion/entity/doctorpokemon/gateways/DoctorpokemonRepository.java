@@ -2,6 +2,9 @@ package co.com.sofka.model.atencion.entity.doctorpokemon.gateways;
 
 import co.com.sofka.model.atencion.entity.doctorpokemon.Doctorpokemon;
 
+import java.util.List;
+
 public interface DoctorpokemonRepository {
-    Doctorpokemon creardoctor(Doctorpokemon doctorpokemon);
+    Doctorpokemon crearDoctor(Doctorpokemon doctorpokemon);
+    List<Doctorpokemon> listarDoctores();
 }
