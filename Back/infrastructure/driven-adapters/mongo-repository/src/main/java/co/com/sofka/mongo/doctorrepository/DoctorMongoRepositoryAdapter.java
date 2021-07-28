@@ -6,6 +6,8 @@ import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class DoctorMongoRepositoryAdapter extends AdapterOperations<Doctorpokemon,Doctorpokemon, String, DoctorMongoDBRepository>
 implements DoctorpokemonRepository
@@ -21,7 +23,12 @@ implements DoctorpokemonRepository
     }
 
     @Override
-    public Doctorpokemon creardoctor(Doctorpokemon doctorpokemon) {
+    public Doctorpokemon crearDoctor(Doctorpokemon doctorpokemon) {
         return this.repository.save(doctorpokemon);
+    }
+
+    @Override
+    public List<Doctorpokemon> listarDoctores() {
+        return this.repository.findAll();
     }
 }
