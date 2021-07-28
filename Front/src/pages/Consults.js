@@ -67,7 +67,6 @@ class Consults extends React.Component {
 
         return [consult , userID[0] , pokemonID[0]]
       })
-      console.log(datamorfis)
 
       this.setState({ loading: false, data: data, consulta:datamorfis });
     } catch (error) {
@@ -108,27 +107,6 @@ class Consults extends React.Component {
           <ConsultList consults = {this.state.consulta} />
         </div>
 
-
-{ /*       <div className="Badges__container">
-          <div className="Badges__buttons">
-            <Link to="/badges/new" className="btn btn-primary">
-              New Consult
-            </Link>
-          </div>
-
-          <ConsultList consults = {this.state.user} />
-        </div>
-
-
-        <div className="Badges__container">
-          <div className="Badges__buttons">
-            <Link to="/badges/new" className="btn btn-primary">
-              New Pokemon
-            </Link>
-          </div>
-
-          <PokemonList pokemon = {this.state.poke} />
-    </div>*/ }
         {this.state.loading && <MiniLoader />}
         
       </React.Fragment>
