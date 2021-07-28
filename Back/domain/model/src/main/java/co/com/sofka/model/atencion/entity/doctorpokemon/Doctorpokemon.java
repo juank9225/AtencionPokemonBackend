@@ -1,5 +1,5 @@
-package co.com.sofka.model.doctorpokemon;
-import co.com.sofka.model.doctorpokemon.values.*;
+package co.com.sofka.model.atencion.entity.doctorpokemon;
+import co.com.sofka.model.atencion.values.valueobjectdoctor.*;
 import lombok.Builder;
 import lombok.Data;
 

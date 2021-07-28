@@ -1,9 +1,12 @@
 package co.com.sofka.config;
 
+import co.com.sofka.model.atencion.Atencion;
+import co.com.sofka.model.atencion.gateways.AtencionRepository;
 import co.com.sofka.model.consulta.gateways.ConsultaRepository;
 import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemonRepository;
 import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
-import co.com.sofka.model.doctorpokemon.gateways.DoctorpokemonRepository;
+import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRepository;
+import co.com.sofka.usecase.atencion.CreateAtencionUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
 import co.com.sofka.usecase.consulta.CreateConsultaUseCase;
 import co.com.sofka.usecase.consulta.ListarConsultaUseCase;
@@ -43,5 +46,9 @@ public class UseCasesConfig {
 
         public CreateDoctorPokemonUseCase creardoctor(DoctorpokemonRepository doctorpokemonRepository){
                 return new CreateDoctorPokemonUseCase(doctorpokemonRepository);
+        }
+
+        public CreateAtencionUseCase crearAtencion(AtencionRepository atencionRepository){
+                return new CreateAtencionUseCase(atencionRepository);
         }
 }

@@ -1,8 +1,7 @@
 package co.com.sofka.mongo.doctorrepository;
 
-import co.com.sofka.model.doctorpokemon.Doctorpokemon;
-import co.com.sofka.model.doctorpokemon.gateways.DoctorpokemonRepository;
-import co.com.sofka.mongo.doctorrepository.DoctorMongoDBRepository;
+import co.com.sofka.model.atencion.entity.doctorpokemon.Doctorpokemon;
+import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRepository;
 import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;

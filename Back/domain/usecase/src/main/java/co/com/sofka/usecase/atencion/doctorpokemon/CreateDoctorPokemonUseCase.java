@@ -1,7 +1,7 @@
 package co.com.sofka.usecase.atencion.doctorpokemon;
 
-import co.com.sofka.model.doctorpokemon.Doctorpokemon;
-import co.com.sofka.model.doctorpokemon.gateways.DoctorpokemonRepository;
+import co.com.sofka.model.atencion.entity.doctorpokemon.Doctorpokemon;
+import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

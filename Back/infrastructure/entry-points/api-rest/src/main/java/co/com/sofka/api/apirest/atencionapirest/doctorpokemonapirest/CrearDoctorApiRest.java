@@ -2,7 +2,7 @@ package co.com.sofka.api.apirest.atencionapirest.doctorpokemonapirest;
 
 import co.com.sofka.api.dtos.DoctorDTO;
 import co.com.sofka.api.mapper.DoctorMapper;
-import co.com.sofka.model.doctorpokemon.Doctorpokemon;
+import co.com.sofka.model.atencion.entity.doctorpokemon.Doctorpokemon;
 import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
