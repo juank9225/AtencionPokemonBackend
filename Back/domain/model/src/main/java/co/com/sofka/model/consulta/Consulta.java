@@ -1,8 +1,8 @@
 package co.com.sofka.model.consulta;
-import co.com.sofka.model.consulta.valueobjectconsulta.CausaEnfermedad;
-import co.com.sofka.model.consulta.valueobjectconsulta.EstadoRevision;
-import co.com.sofka.model.consulta.valueobjectconsulta.FechaConsulta;
-import co.com.sofka.model.consulta.valueobjectconsulta.Sintomas;
+import co.com.sofka.model.consulta.values.valueobjectconsulta.CausaEnfermedad;
+import co.com.sofka.model.consulta.values.valueobjectconsulta.EstadoRevision;
+import co.com.sofka.model.consulta.values.valueobjectconsulta.FechaConsulta;
+import co.com.sofka.model.consulta.values.valueobjectconsulta.Sintomas;
 import lombok.Builder;
 import lombok.Data;
 
