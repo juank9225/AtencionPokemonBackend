@@ -7,4 +7,5 @@ import java.util.List;
 public interface MascotaPokemonRepository {
     MascotaPokemon crearMascota(MascotaPokemon mascotaPokemon);
     List<MascotaPokemon> listarPokemones();
+    MascotaPokemon obtenerMascota(String id);
 }

@@ -36,8 +36,8 @@ public class UseCasesConfig {
                 return new ListarMascotaUseCase(mascotaPokemonRepository);
         }
 
-        public CreateConsultaUseCase crearConsulta(ConsultaRepository consultaRepository){
-                return new CreateConsultaUseCase(consultaRepository);
+        public CreateConsultaUseCase crearConsulta(ConsultaRepository consultaRepository,UsuarioRepository usuarioRepository,MascotaPokemonRepository mascotaPokemonRepository){
+                return new CreateConsultaUseCase(consultaRepository,usuarioRepository,mascotaPokemonRepository);
         }
 
         public ListarConsultaUseCase listarConsultas(ConsultaRepository consultaRepository){
