@@ -1,5 +1,7 @@
 package co.com.sofka.api.apirest.consultaapirest;
 
+import co.com.sofka.api.dtos.ConsultaDTO;
+import co.com.sofka.api.mapper.ConsultaMapper;
 import co.com.sofka.model.consulta.Consulta;
 import co.com.sofka.usecase.consulta.CreateConsultaUseCase;
 import lombok.AllArgsConstructor;
@@ -14,10 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class AgregarConsultaApiRest {
     private final CreateConsultaUseCase createConsultaUseCase;
+    private ConsultaMapper consultaMapper;
 
     @PostMapping(path = "/crear/consulta")
-    public Consulta crearConsulta(@RequestBody Consulta consulta) {
-        return createConsultaUseCase.crearConsulta(consulta);
+    public ConsultaDTO crearConsulta(@RequestBody ConsultaDTO consultaDTO) {
+        Consulta consulta = consultaMapper.fromDTO(consultaDTO);
+        return consultaMapper.fromModel(createConsultaUseCase.crearConsulta(consulta));
     }
 
 }

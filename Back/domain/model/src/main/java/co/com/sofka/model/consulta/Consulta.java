@@ -38,4 +38,60 @@ public class Consulta {
         this.idUsuario = idUsuario;
         this.idMascotaPokemon = idMascotaPokemon;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public FechaConsulta getFechaConsulta() {
+        return fechaConsulta;
+    }
+
+    public void setFechaConsulta(FechaConsulta fechaConsulta) {
+        this.fechaConsulta = fechaConsulta;
+    }
+
+    public CausaEnfermedad getCausaEnfermedad() {
+        return causaEnfermedad;
+    }
+
+    public void setCausaEnfermedad(CausaEnfermedad causaEnfermedad) {
+        this.causaEnfermedad = causaEnfermedad;
+    }
+
+    public Sintomas getSintomas() {
+        return sintomas;
+    }
+
+    public void setSintomas(Sintomas sintomas) {
+        this.sintomas = sintomas;
+    }
+
+    public EstadoRevision getEstadoRevision() {
+        return estadoRevision;
+    }
+
+    public void setEstadoRevision(EstadoRevision estadoRevision) {
+        this.estadoRevision = estadoRevision;
+    }
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getIdMascotaPokemon() {
+        return idMascotaPokemon;
+    }
+
+    public void setIdMascotaPokemon(String idMascotaPokemon) {
+        this.idMascotaPokemon = idMascotaPokemon;
+    }
 }

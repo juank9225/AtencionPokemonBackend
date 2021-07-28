@@ -10,6 +10,7 @@ import java.util.List;
 
 @Component
 public class DoctorMapper {
+
     public Doctorpokemon fromDTO(DoctorDTO doctorDTO){
         Doctorpokemon doctorpokemon = new Doctorpokemon();
         doctorpokemon.setId(doctorDTO.getId());
