@@ -92,8 +92,9 @@
       "nombre": {
         "valor": "juank"
       },
-      "apellido":{ 
-      "valor":"salcedo Baldovino"},
+      "apellido": {
+        "valor": "salcedo Baldovino"
+      },
       "telefono": {
         "valor": "318417353"
       },
@@ -155,6 +156,38 @@
       "correo": {
         "valor": "oscarlopera1345@gmail.com"
       }
+    },
+    {
+      "nombre": "Ana Maria",
+      "apellido": "Hernández Moreno",
+      "correo": "anahernandez000814@gmail.com",
+      "profesion": "Master Pokemon",
+      "telefono": "3276405",
+      "id": "j6Bidza"
+    },
+    {
+      "nombre": "Sara",
+      "apellido": "Garcia",
+      "correo": "lasarita145@gmail.com",
+      "profesion": "Junior Pokemon",
+      "telefono": "456892145",
+      "id": "HCa2pSf"
+    },
+    {
+      "nombre": "Axel",
+      "apellido": "Lopera",
+      "correo": "axelopera@gmail.com",
+      "profesion": "Entrenador Pokemon",
+      "telefono": "3276405",
+      "id": "NVoACSx"
+    },
+    {
+      "nombre": "Juan ",
+      "apellido": "Baldovino",
+      "correo": "Juank@gmail.com",
+      "profesion": "Junior Pokemon",
+      "telefono": "3276405",
+      "id": "SHJOjM1"
     }
   ],
   "pokemon": [
@@ -277,6 +310,33 @@
       "habilidad": {
         "valor": "Entusiasmo"
       }
+    },
+    {
+      "nombre": "Axel",
+      "raza": "Butterfree",
+      "habilidad": "Aletea a gran velocidad para lanzar sus escamas altamente toxicas",
+      "id": "hhLyUs9"
+    },
+    {
+      "nombre": "Gluuu",
+      "raza": "Gloom",
+      "tipo": "Planta y veneno",
+      "habilidad": "Libera un fétido olor por los pistilos. El fuerte hedor hace perder el conocimiento a cualquiera que se encuentre en un radio de 2 km.",
+      "id": "SnJYKG_"
+    },
+    {
+      "nombre": "Lion",
+      "raza": "Arcaine",
+      "tipo": "Fuego",
+      "habilidad": "Intimidación, absorbe fuego",
+      "id": "qN7d8E9"
+    },
+    {
+      "nombre": "Lin",
+      "raza": "Venusaur",
+      "tipo": "Planta y veneno",
+      "habilidad": "La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol.",
+      "id": "P9h4Rjl"
     }
   ]
 }

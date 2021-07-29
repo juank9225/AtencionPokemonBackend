@@ -81,7 +81,20 @@ const api = {
       return callApi('/pokemon');
     },read(consultId) {
       return callApi(`/pokemon/${consultId}`);
-    }
+    },
+    create(consult) {
+      // throw new Error('500: Server error');
+      return callApi(`/pokemon`, {
+        method: 'POST',
+        body: JSON.stringify(consult),
+      });
+    },
+    update(consultId, updates) {
+      return callApi(`/pokemon/${consultId}`, {
+        method: 'PUT',
+        body: JSON.stringify(updates),
+      });
+    },
   },
 };
 

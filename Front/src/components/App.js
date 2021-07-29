@@ -4,9 +4,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from '../pages/Home';
 import Consults from '../pages/Consults';
-import ConsultNew from '../pages/ConsultNew';
+import UserNew from '../pages/UserNew';
+import PokemonNew from '../pages/PokemonNew.js';
 import ConsultDetails from '../pages/ConsultDetailsContainer';
 import UserEdit from '../pages/UserEdit';
+
 /*
 import BadgeDetails from '../pages/BadgeDetailsContainer';
 import BadgeEdit from '../pages/BadgeEdit';
@@ -24,7 +26,8 @@ function App() {
         <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/consults" component={Consults} />
-        <Route exact path="/consults/usernew" component={ConsultNew} />
+        <Route exact path="/consults/usernew" component={UserNew} />
+        <Route exact path="/consults/pokemonnew" component={PokemonNew} />
         <Route exact path="/consults/:consultId" component={ConsultDetails} />
         <Route exact path="/consults/:userId/edituser/:consultId" component={UserEdit} />
         </Switch>
