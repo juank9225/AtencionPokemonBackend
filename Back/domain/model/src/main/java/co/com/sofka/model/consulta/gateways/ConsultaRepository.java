@@ -9,4 +9,6 @@ public interface ConsultaRepository {
     List<Consulta> listarConsultas();
     List<Consulta> listarConsultasActivas(String fecha);
     List<Consulta> listarConsultasInactivas(String fecha);
+    Consulta actualizarConsulta(Consulta consulta);
+    Consulta obtenerConsulta(String id);
 }

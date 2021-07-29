@@ -1,10 +1,13 @@
 package co.com.sofka.api.apirest.consultaapirest;
 
 
-import co.com.sofka.model.consulta.Consulta;
+import co.com.sofka.api.dtos.ConsultaDTO;
+import co.com.sofka.api.mapper.ConsultaMapper;
 import co.com.sofka.usecase.consulta.ListarConsultaUseCase;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,9 +17,10 @@ import java.util.List;
 @AllArgsConstructor
 public class ListarConsultaApiRest {
     private final ListarConsultaUseCase listarConsultaUseCase;
+    private ConsultaMapper consultaMapper;
 
     @GetMapping(path = "/listar/consultas")
-    public List<Consulta> listarConsultas(){
-        return listarConsultaUseCase.listarConsultas();
+    public ResponseEntity<List<ConsultaDTO>> listarConsultas(){
+        return new ResponseEntity(consultaMapper.fromCollectionList(listarConsultaUseCase.listarConsultas()), HttpStatus.OK);
     }
 }
