@@ -41,4 +41,14 @@ public class ConsultaMongoRepositoryAdapter extends AdapterOperations<Consulta,C
     public List<Consulta> listarConsultasInactivas(String fecha){
         return this.repository.findByFechaConsultaValor(fecha);
     }
+
+    @Override
+    public Consulta actualizarConsulta(Consulta consulta) {
+        return this.repository.save(consulta);
+    }
+
+    @Override
+    public Consulta obtenerConsulta(String id) {
+        return this.repository.findById(id).orElseThrow(()->new IllegalArgumentException("no se encontro la consulta."));
+    }
 }

@@ -34,6 +34,11 @@ implements MascotaPokemonRepository
 
     @Override
     public MascotaPokemon obtenerMascota(String id) {
-        return this.repository.findById(id).orElseThrow(()->{throw new IllegalArgumentException("no se encontro la mascota."); });
+        return this.repository.findById(id).orElseThrow(()->new IllegalArgumentException("no se encontro la mascota."));
+    }
+
+    @Override
+    public MascotaPokemon actualizarMascota(MascotaPokemon mascotaPokemon) {
+        return this.repository.save(mascotaPokemon);
     }
 }

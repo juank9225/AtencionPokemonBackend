@@ -8,10 +8,8 @@ import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRe
 import co.com.sofka.usecase.atencion.CreateAtencionUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonUseCase;
-import co.com.sofka.usecase.consulta.CreateConsultaUseCase;
-import co.com.sofka.usecase.consulta.ListarConsultaUseCase;
-import co.com.sofka.usecase.consulta.ListarConsultasActivasUseCase;
-import co.com.sofka.usecase.consulta.ListarConsultasInactivasUseCase;
+import co.com.sofka.usecase.consulta.*;
+import co.com.sofka.usecase.consulta.mascota.ActualizarMascotaUseCase;
 import co.com.sofka.usecase.consulta.mascota.CreateMascotaUseCase;
 import co.com.sofka.usecase.consulta.mascota.ListarMascotaUseCase;
 import co.com.sofka.usecase.consulta.usuario.ActualizarUsuarioUseCase;
@@ -52,8 +50,8 @@ public class UseCasesConfig {
                 return new CreateDoctorPokemonUseCase(doctorpokemonRepository);
         }
 
-        public CreateAtencionUseCase crearAtencion(AtencionRepository atencionRepository){
-                return new CreateAtencionUseCase(atencionRepository);
+        public CreateAtencionUseCase crearAtencion(AtencionRepository atencionRepository, DoctorpokemonRepository doctorpokemonRepository, ConsultaRepository consultaRepository){
+                return new CreateAtencionUseCase(atencionRepository,doctorpokemonRepository,consultaRepository);
         }
 
         public ListarDoctorPokemonUseCase listarDoctores(DoctorpokemonRepository doctorpokemonRepository){
@@ -74,5 +72,13 @@ public class UseCasesConfig {
 
         public ActualizarUsuarioUseCase actualizarUsuario(UsuarioRepository usuarioRepository){
                 return new ActualizarUsuarioUseCase(usuarioRepository);
+        }
+
+        public ActualizarConsultaUseCase actualizarConsulta(ConsultaRepository consultaRepository){
+                return new ActualizarConsultaUseCase(consultaRepository);
+        }
+
+        public ActualizarMascotaUseCase actualizarMascota(MascotaPokemonRepository mascotaPokemonRepository){
+                return new ActualizarMascotaUseCase(mascotaPokemonRepository);
         }
 }
