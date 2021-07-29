@@ -42,17 +42,6 @@ class ConsultForm extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Estado de Revison</label>
-            <input
-              onChange={this.props.onChange}
-              className="form-control"
-              type="text"
-              name="estadoRevision"
-              value={this.props.formValues.estadoRevision.valor}
-            />
-          </div>
-
           <button onClick={this.handleClick} className="btn btn-primary">
             Save
           </button>

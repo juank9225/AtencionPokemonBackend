@@ -31,12 +31,11 @@ class PokemonNew extends React.Component {
   handleSubmit = async e => {
     e.preventDefault();
     this.setState({ loading: true, error: null });
-
     try {
-      await api.pokemon.create(this.state.form);
+      const response = await api.pokemon.create(this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/consults/consultnew');
+      this.props.history.push(`/consults/consultnew/${this.props.match.params.userId}/${response.id}`);
     } catch (error) {
       this.setState({ loading: false, error: error });
     }

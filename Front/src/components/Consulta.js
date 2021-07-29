@@ -22,10 +22,6 @@ class Consulta extends React.Component {
           <h3>{this.props.causaEnfermedad}</h3>
         </div>
 
-        <div className="Badge__section-info">
-          <h3>{this.props.estadoRevision}</h3>
-        </div>
-
         <div className="Badge__footer">#ConsultorioPokemon</div>
       </div>
     );

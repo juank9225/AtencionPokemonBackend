@@ -28,8 +28,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/consults" component={Consults} />
         <Route exact path="/consults/usernew" component={UserNew} />
-        <Route exact path="/consults/pokemonnew" component={PokemonNew} />
-        <Route exact path="/consults/consultnew" component={ConsultNew} />
+        <Route exact path="/consults/pokemonnew/:userId" component={PokemonNew} />
+        <Route exact path="/consults/consultnew/:userId/:pokemonId" component={ConsultNew} />
         <Route exact path="/consults/:consultId" component={ConsultDetails} />
         <Route exact path="/consults/:userId/edituser/:consultId" component={UserEdit} />
         </Switch>

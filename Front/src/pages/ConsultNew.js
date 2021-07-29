@@ -15,7 +15,9 @@ class ConsultNew extends React.Component {
       fechaConsulta: '',
       causaEnfermedad: '',
       sintomas: '',
-      estadoRevision: '',
+      estadoRevision: false,
+      idUsuario: this.props.match.params.userId,
+      idMascotaPokemon: this.props.match.params.pokemonId
     },
   };
 
@@ -35,7 +37,6 @@ class ConsultNew extends React.Component {
     try {
       await api.consults.create(this.state.form);
       this.setState({ loading: false });
-
       this.props.history.push('/consults');
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -64,7 +65,6 @@ class ConsultNew extends React.Component {
                 fechaConsulta={this.state.form.fechaConsulta || 'fecha consulta'}
                 causaEnfermedad={this.state.form.causaEnfermedad || 'causa de la enfermedad'}
                 sintomas={this.state.form.sintomas || 'sintomas'}
-                estadoRevision={this.state.form.estadoRevision || 'estadoRevision'}
               />
             </div>
 

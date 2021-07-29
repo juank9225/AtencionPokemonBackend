@@ -34,10 +34,9 @@ class UserNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.usuarios.create(this.state.form);
+      const response = await api.usuarios.create(this.state.form);
       this.setState({ loading: false });
-
-      this.props.history.push('/consults/pokemonnew');
+      this.props.history.push(`/consults/pokemonnew/${response.id}`);
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
