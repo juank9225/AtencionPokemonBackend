@@ -63,17 +63,11 @@ public class UseCasesConfig {
                 return new ListarConsultasActivasUseCase(consultaRepository);
         }
 
-<<<<<<< HEAD
         public ListarConsultasInactivasUseCase listarConsultasInactivasUseCase(ConsultaRepository consultaRepository){
                 return new ListarConsultasInactivasUseCase(consultaRepository);
-=======
-
-
-
-
+        }
 
         public ListarUsuarioIdUseCase listarUsuarioId(UsuarioRepository usuarioRepository){
-                return new ListarUsuarioIdUseCase(usuarioRepository);
->>>>>>> 3963ba8f37d5ec91326bb18f73f13f4ce70548bd
+                        return new ListarUsuarioIdUseCase(usuarioRepository);
         }
 }
