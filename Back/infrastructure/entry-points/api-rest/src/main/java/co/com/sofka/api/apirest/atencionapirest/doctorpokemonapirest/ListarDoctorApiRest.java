@@ -5,6 +5,7 @@ import co.com.sofka.api.mapper.DoctorMapper;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 @AllArgsConstructor
 public class ListarDoctorApiRest {
