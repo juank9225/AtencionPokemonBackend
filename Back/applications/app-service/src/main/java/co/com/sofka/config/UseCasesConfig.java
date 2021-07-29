@@ -50,8 +50,8 @@ public class UseCasesConfig {
                 return new CreateDoctorPokemonUseCase(doctorpokemonRepository);
         }
 
-        public CreateAtencionUseCase crearAtencion(AtencionRepository atencionRepository){
-                return new CreateAtencionUseCase(atencionRepository);
+        public CreateAtencionUseCase crearAtencion(AtencionRepository atencionRepository, DoctorpokemonRepository doctorpokemonRepository, ConsultaRepository consultaRepository){
+                return new CreateAtencionUseCase(atencionRepository,doctorpokemonRepository,consultaRepository);
         }
 
         public ListarDoctorPokemonUseCase listarDoctores(DoctorpokemonRepository doctorpokemonRepository){

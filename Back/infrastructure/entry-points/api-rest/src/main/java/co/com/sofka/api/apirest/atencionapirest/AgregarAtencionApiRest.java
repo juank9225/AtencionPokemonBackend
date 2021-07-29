@@ -5,7 +5,9 @@ import co.com.sofka.api.mapper.AtencionMapper;
 import co.com.sofka.model.atencion.Atencion;
 import co.com.sofka.usecase.atencion.CreateAtencionUseCase;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,8 +19,8 @@ public class AgregarAtencionApiRest {
     private AtencionMapper atencionMapper;
 
     @PostMapping(path = "/crear/atencion")
-    public AtencionDTO crearAtencion(@RequestBody AtencionDTO atencionDTO){
+    public ResponseEntity<AtencionDTO> crearAtencion(@RequestBody AtencionDTO atencionDTO){
         Atencion atencion = atencionMapper.fromDTO(atencionDTO);
-        return atencionMapper.fromModel(createAtencionUseCase.crearatencion(atencion));
+        return new ResponseEntity(atencionMapper.fromModel(createAtencionUseCase.crearatencion(atencion)), HttpStatus.OK);
     }
 }

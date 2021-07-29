@@ -31,4 +31,9 @@ implements DoctorpokemonRepository
     public List<Doctorpokemon> listarDoctores() {
         return this.repository.findAll();
     }
+
+    @Override
+    public Doctorpokemon obtenerDoctor(String id) {
+        return this.repository.findById(id).orElseThrow(()->new IllegalArgumentException("no se encontro el doctor."));
+    }
 }

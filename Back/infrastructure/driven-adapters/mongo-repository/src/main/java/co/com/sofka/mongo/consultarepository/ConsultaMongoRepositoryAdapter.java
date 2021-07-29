@@ -49,6 +49,6 @@ public class ConsultaMongoRepositoryAdapter extends AdapterOperations<Consulta,C
 
     @Override
     public Consulta obtenerConsulta(String id) {
-        return this.repository.findById(id).orElseThrow(()->{throw new IllegalArgumentException("no se encontro la consulta."); });
+        return this.repository.findById(id).orElseThrow(()->new IllegalArgumentException("no se encontro la consulta."));
     }
 }

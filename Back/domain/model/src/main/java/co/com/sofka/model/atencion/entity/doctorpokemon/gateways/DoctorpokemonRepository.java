@@ -7,4 +7,5 @@ import java.util.List;
 public interface DoctorpokemonRepository {
     Doctorpokemon crearDoctor(Doctorpokemon doctorpokemon);
     List<Doctorpokemon> listarDoctores();
+    Doctorpokemon obtenerDoctor(String id);
 }
