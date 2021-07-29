@@ -2,20 +2,18 @@ package co.com.sofka.api.dtos;
 
 import co.com.sofka.model.consulta.values.valueobjectmascota.*;
 
-import java.util.List;
-
 public class MascotaDTO {
     private String id;
     private Identificacion identificacion;
     private Nombre nombre;
     private Raza raza;
-    private List<Tipo> tipo;
+    private Tipo tipo;
     private Habilidad habilidad;
 
     public MascotaDTO() {
     }
 
-    public MascotaDTO(String id, Identificacion identificacion, Nombre nombre, Raza raza, List<Tipo> tipo, Habilidad habilidad) {
+    public MascotaDTO(String id, Identificacion identificacion, Nombre nombre, Raza raza, Tipo tipo, Habilidad habilidad) {
         this.id = id;
         this.identificacion = identificacion;
         this.nombre = nombre;
@@ -24,7 +22,7 @@ public class MascotaDTO {
         this.habilidad = habilidad;
     }
 
-    public MascotaDTO(Identificacion identificacion, Nombre nombre, Raza raza, List<Tipo> tipo, Habilidad habilidad) {
+    public MascotaDTO(Identificacion identificacion, Nombre nombre, Raza raza, Tipo tipo, Habilidad habilidad) {
         this.identificacion = identificacion;
         this.nombre = nombre;
         this.raza = raza;
@@ -64,11 +62,11 @@ public class MascotaDTO {
         this.raza = raza;
     }
 
-    public List<Tipo> getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(List<Tipo> tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
 

@@ -8,4 +8,5 @@ public interface UsuarioRepository {
     Usuario crearUsuario(Usuario usuario);
     List<Usuario> listarUsuarios();
     Usuario obtenerUsuario(String id);
+    Usuario actualizarUsuario(Usuario usuario);
 }

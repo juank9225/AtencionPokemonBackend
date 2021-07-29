@@ -14,6 +14,7 @@ import co.com.sofka.usecase.consulta.ListarConsultasActivasUseCase;
 import co.com.sofka.usecase.consulta.ListarConsultasInactivasUseCase;
 import co.com.sofka.usecase.consulta.mascota.CreateMascotaUseCase;
 import co.com.sofka.usecase.consulta.mascota.ListarMascotaUseCase;
+import co.com.sofka.usecase.consulta.usuario.ActualizarUsuarioUseCase;
 import co.com.sofka.usecase.consulta.usuario.CreateUsuarioUseCase;
 import co.com.sofka.usecase.consulta.usuario.ListarUsuarioIdUseCase;
 import org.springframework.context.annotation.ComponentScan;
@@ -69,5 +70,9 @@ public class UseCasesConfig {
 
         public ListarUsuarioIdUseCase listarUsuarioId(UsuarioRepository usuarioRepository){
                         return new ListarUsuarioIdUseCase(usuarioRepository);
+        }
+
+        public ActualizarUsuarioUseCase actualizarUsuario(UsuarioRepository usuarioRepository){
+                return new ActualizarUsuarioUseCase(usuarioRepository);
         }
 }

@@ -36,4 +36,9 @@ implements UsuarioRepository
     public Usuario obtenerUsuario(String id) {
         return this.repository.findById(id).orElseThrow(()->{throw new IllegalArgumentException("no se encontro el usuario."); });
     }
+
+    @Override
+    public Usuario actualizarUsuario(Usuario usuario) {
+        return this.repository.save(usuario);
+    }
 }

@@ -5,7 +5,9 @@ import co.com.sofka.api.mapper.UsuarioMapper;
 import co.com.sofka.model.consulta.entity.usuario.Usuario;
 import co.com.sofka.usecase.consulta.usuario.CreateUsuarioUseCase;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +21,9 @@ public class AgregarUsuariosApiRest {
     private UsuarioMapper usuarioMapper;
 
     @PostMapping(path = "/crear/usuario")
-    public UsuarioDTO crearUsuario(@RequestBody UsuarioDTO usuarioDTO) {
+    public ResponseEntity<UsuarioDTO> crearUsuario(@RequestBody UsuarioDTO usuarioDTO) {
         Usuario usuario = usuarioMapper.fromDTO(usuarioDTO);
-        return usuarioMapper.fromModel(createUsuarioUseCase.crearUsuario(usuario));
+        return new  ResponseEntity(usuarioMapper.fromModel(createUsuarioUseCase.crearUsuario(usuario)), HttpStatus.OK);
     }
 
 }
