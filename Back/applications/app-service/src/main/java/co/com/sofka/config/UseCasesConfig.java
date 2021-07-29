@@ -14,6 +14,7 @@ import co.com.sofka.usecase.consulta.ListarConsultasActivasUseCase;
 import co.com.sofka.usecase.consulta.mascota.CreateMascotaUseCase;
 import co.com.sofka.usecase.consulta.mascota.ListarMascotaUseCase;
 import co.com.sofka.usecase.consulta.usuario.CreateUsuarioUseCase;
+import co.com.sofka.usecase.consulta.usuario.ListarUsuarioIdUseCase;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
@@ -59,5 +60,14 @@ public class UseCasesConfig {
 
         public ListarConsultasActivasUseCase listarConsultasActivas(ConsultaRepository consultaRepository){
                 return new ListarConsultasActivasUseCase(consultaRepository);
+        }
+
+
+
+
+
+
+        public ListarUsuarioIdUseCase listarUsuarioId(UsuarioRepository usuarioRepository){
+                return new ListarUsuarioIdUseCase(usuarioRepository);
         }
 }

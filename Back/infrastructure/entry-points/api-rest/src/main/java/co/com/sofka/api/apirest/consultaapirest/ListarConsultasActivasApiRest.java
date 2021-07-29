@@ -2,7 +2,6 @@ package co.com.sofka.api.apirest.consultaapirest;
 
 import co.com.sofka.api.dtos.ConsultaDTO;
 import co.com.sofka.api.mapper.ConsultaMapper;
-import co.com.sofka.model.consulta.Consulta;
 import co.com.sofka.usecase.consulta.ListarConsultasActivasUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
