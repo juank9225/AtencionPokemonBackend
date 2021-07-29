@@ -188,6 +188,14 @@
       "profesion": "Junior Pokemon",
       "telefono": "3276405",
       "id": "SHJOjM1"
+    },
+    {
+      "nombre": "jose",
+      "apellido": "sol",
+      "correo": "josesol@gmail.com",
+      "profesion": "entrenador pokemon",
+      "telefono": "3146789099",
+      "id": "mtspQ0x"
     }
   ],
   "pokemon": [
@@ -337,6 +345,13 @@
       "tipo": "Planta y veneno",
       "habilidad": "La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol.",
       "id": "P9h4Rjl"
+    },
+    {
+      "nombre": "changuitas junior",
+      "raza": "pikachu",
+      "tipo": "rayo",
+      "habilidad": "lanza rayos",
+      "id": "j6uIx-a"
     }
   ]
 }

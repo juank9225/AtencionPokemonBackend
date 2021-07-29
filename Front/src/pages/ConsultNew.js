@@ -2,20 +2,20 @@ import React from 'react';
 
 import './styles/ConsultNew.css';
 import header from '../images/vulpix.png';
-import Pokemon from '../components/Pokemon';
-import PokemonForm from '../components/PokemonForm';
+import Consulta from '../components/Consulta';
+import ConsultForm from '../components/ConsultForm';
 import PageLoading from '../components/PageLoading';
 import api from '../api';
 
-class PokemonNew extends React.Component {
+class ConsultNew extends React.Component {
   state = {
     loading: false,
     error: null,
     form: {
-      nombre: '',
-      raza: '',
-      tipo: '',
-      habilidad: '',
+      fechaConsulta: '',
+      causaEnfermedad: '',
+      sintomas: '',
+      estadoRevision: '',
     },
   };
 
@@ -33,10 +33,10 @@ class PokemonNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.pokemon.create(this.state.form);
+      await api.consults.create(this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push('/consults/consultnew');
+      this.props.history.push('/consults');
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -60,17 +60,17 @@ class PokemonNew extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <Pokemon
-                nombre={this.state.form.nombre || 'Nombre'}
-                raza={this.state.form.raza || 'Raza'}
-                tipo={this.state.form.tipo || 'Tipo'}
-                habilidad={this.state.form.habilidad || 'Habilidad'}
+              <Consulta
+                fechaConsulta={this.state.form.fechaConsulta || 'fecha consulta'}
+                causaEnfermedad={this.state.form.causaEnfermedad || 'causa de la enfermedad'}
+                sintomas={this.state.form.sintomas || 'sintomas'}
+                estadoRevision={this.state.form.estadoRevision || 'estadoRevision'}
               />
             </div>
 
             <div className="col-6">
-              <h1>Nuevo Pokemon</h1>
-              <PokemonForm
+              <h1>Nueva Consulta Pokemon</h1>
+              <ConsultForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
@@ -84,4 +84,4 @@ class PokemonNew extends React.Component {
   }
 }
 
-export default PokemonNew;
+export default ConsultNew;
