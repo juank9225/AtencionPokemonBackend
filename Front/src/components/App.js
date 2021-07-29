@@ -9,6 +9,8 @@ import PokemonNew from '../pages/PokemonNew.js';
 import ConsultNew from '../pages/ConsultNew.js';
 import ConsultDetails from '../pages/ConsultDetailsContainer';
 import UserEdit from '../pages/UserEdit';
+import PokemonEdit from '../pages/PokemonEdit';
+import ConsultEdit from '../pages/ConsultEdit';
 
 /*
 import BadgeDetails from '../pages/BadgeDetailsContainer';
@@ -32,6 +34,8 @@ function App() {
         <Route exact path="/consults/consultnew/:userId/:pokemonId" component={ConsultNew} />
         <Route exact path="/consults/:consultId" component={ConsultDetails} />
         <Route exact path="/consults/:userId/edituser/:consultId" component={UserEdit} />
+        <Route exact path="/consults/:pokemonId/editpokemon/:consultId" component={PokemonEdit} />
+        <Route exact path="/consults/:consultId/editconsult" component={ConsultEdit} />
         </Switch>
       </Layout>
     </BrowserRouter>

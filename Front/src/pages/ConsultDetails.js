@@ -69,6 +69,14 @@ function ConsultDetails(props) {
                   Editar Consulta
                 </Link>
               </div>
+              <div>
+                <Link
+                  className="btn btn-primary mb-4"
+                  to={`/consults`}
+                >
+                  Regresar
+                </Link>
+              </div>
             </div>
           </div>
         </div>
