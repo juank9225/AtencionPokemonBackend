@@ -12,6 +12,7 @@ class ConsultEdit extends React.Component {
     loading: true,
     error: null,
     form: {
+      id:this.props.match.params.consultId,
       fechaConsulta: '',
       causaEnfermedad: '',
       sintomas: '',
@@ -49,7 +50,22 @@ class ConsultEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.consults.update(this.props.match.params.consultId, this.state.form);
+
+      const data = this.state.form
+
+      const datamorfis = {
+        morfis:{
+          id:this.props.match.params.consultId,
+          fechaConsulta: data.fechaConsulta.valor || data.fechaConsulta,
+          causaEnfermedad: data.causaEnfermedad.valor || data.causaEnfermedad,
+          sintomas: data.sintomas.valor || data.sintomas,
+          estadoRevision: false,
+          idUsuario: data.idUsuario,
+          idMascotaPokemon: data.idMascotaPokemon
+        }
+
+      } 
+      await api.consults.update(this.props.match.params.consultId, datamorfis.morfis);
       this.setState({ loading: false });
 
       this.props.history.push(`/consults/${this.props.match.params.consultId}`);
@@ -62,8 +78,6 @@ class ConsultEdit extends React.Component {
     if (this.state.loading) {
       return <PageLoading />;
     }
-
-    console.log(this.state.form)
 
     return (
       <React.Fragment>
@@ -79,9 +93,9 @@ class ConsultEdit extends React.Component {
           <div className="row">
             <div className="col-6">
               <Consult
-                fechaConsulta={this.state.form.fechaConsulta.valor || this.state.form.fechaConsulta || 'NAME'}
-                causaEnfermedad={this.state.form.causaEnfermedad.valor || this.state.form.causaEnfermedad ||'LAST_NAME'}
-                sintomas={this.state.form.sintomas.valor || this.state.form.sintomas || 'twitter'}
+                fechaConsulta={ this.state.form.fechaConsulta.valor ||this.state.form.fechaConsulta || 'NAME'}
+                causaEnfermedad={this.state.form.causaEnfermedad.valor ||this.state.form.causaEnfermedad ||'LAST_NAME'}
+                sintomas={this.state.form.sintomas.valor ||this.state.form.sintomas || 'twitter'}
               />
             </div>
 

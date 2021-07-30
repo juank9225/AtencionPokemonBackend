@@ -1,13 +1,14 @@
-const BASE_URL = 'http://localhost:3001';
+//const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://protected-garden-88860.herokuapp.com/api'
 
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+/*const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const randomNumber = (min = 0, max = 1) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 const simulateNetworkLatency = (min = 30, max = 1500) =>
   delay(randomNumber(min, max));
-
+*/
 async function callApi(endpoint, options = {}) {
-  await simulateNetworkLatency();
+  //await simulateNetworkLatency();
 
   options.headers = {
     'Content-Type': 'application/json',
@@ -24,20 +25,20 @@ async function callApi(endpoint, options = {}) {
 const api = {
   consults: {
     list() {
-      return callApi('/consults');
+      return callApi('/listar/consultas');
     },
     create(consult) {
       // throw new Error('500: Server error');
-      return callApi(`/consults`, {
+      return callApi(`/crear/consulta`, {
         method: 'POST',
         body: JSON.stringify(consult),
       });
     },
     read(consultId) {
-      return callApi(`/consults/${consultId}`);
+      return callApi(`/listar/consulta/${consultId}`);
     },
     update(consultId, updates) {
-      return callApi(`/consults/${consultId}`, {
+      return callApi(`/actualizar/consulta`, {
         method: 'PUT',
         body: JSON.stringify(updates),
       });
@@ -51,20 +52,20 @@ const api = {
   },
   usuarios: {
     list() {
-      return callApi('/usuarios');
+      return callApi('/listar/usuarios');
     },
     create(consult) {
       // throw new Error('500: Server error');
-      return callApi(`/usuarios`, {
+      return callApi(`/crear/usuario`, {
         method: 'POST',
         body: JSON.stringify(consult),
       });
     },
     read(consultId) {
-      return callApi(`/usuarios/${consultId}`);
+      return callApi(`/listar/usuario/${consultId}`);
     },
     update(consultId, updates) {
-      return callApi(`/usuarios/${consultId}`, {
+      return callApi(`/actualizar/usuario`, {
         method: 'PUT',
         body: JSON.stringify(updates),
       });
@@ -78,19 +79,20 @@ const api = {
   },
   pokemon: {
     list() {
-      return callApi('/pokemon');
-    },read(consultId) {
-      return callApi(`/pokemon/${consultId}`);
+      return callApi('/listar/pokemones');
+    },
+    read(consultId) {
+      return callApi(`/listar/mascota/${consultId}`);
     },
     create(consult) {
       // throw new Error('500: Server error');
-      return callApi(`/pokemon`, {
+      return callApi(`/crear/mascota`, {
         method: 'POST',
         body: JSON.stringify(consult),
       });
     },
     update(consultId, updates) {
-      return callApi(`/pokemon/${consultId}`, {
+      return callApi(`/actualizar/mascota`, {
         method: 'PUT',
         body: JSON.stringify(updates),
       });
