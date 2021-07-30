@@ -6,6 +6,9 @@ import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemon
 import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
 import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRepository;
 import co.com.sofka.usecase.atencion.CreateAtencionUseCase;
+import co.com.sofka.usecase.atencion.ListarAtencionIdUseCase;
+import co.com.sofka.usecase.atencion.ListarAtencionesFechaDoctorUseCase;
+import co.com.sofka.usecase.atencion.ListarAtencionesUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonIdUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonUseCase;
@@ -94,5 +97,17 @@ public class UseCasesConfig {
 
         public ListarDoctorPokemonIdUseCase listarDoctorId(DoctorpokemonRepository doctorpokemonRepository){
                 return new ListarDoctorPokemonIdUseCase(doctorpokemonRepository);
+        }
+
+        public ListarAtencionesUseCase listaAtenciones(AtencionRepository atencionRepository){
+                return new ListarAtencionesUseCase(atencionRepository);
+        }
+
+        public ListarAtencionIdUseCase listarAtencionId(AtencionRepository atencionRepository){
+                return new ListarAtencionIdUseCase(atencionRepository);
+        }
+
+        public ListarAtencionesFechaDoctorUseCase listarAtencionesFechaDoctor(AtencionRepository atencionRepository){
+                return new ListarAtencionesFechaDoctorUseCase(atencionRepository);
         }
 }
