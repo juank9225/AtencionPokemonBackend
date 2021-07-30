@@ -6,6 +6,8 @@ import co.com.sofka.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class AtencionMongoRepositoryAdapter extends AdapterOperations<Atencion, Atencion, String, AtencionMongoDBRepository>
  implements AtencionRepository
@@ -23,5 +25,20 @@ public class AtencionMongoRepositoryAdapter extends AdapterOperations<Atencion, 
     @Override
     public Atencion crearAtencion(Atencion atencion) {
         return this.repository.save(atencion);
+    }
+
+    @Override
+    public List<Atencion> listarAtenciones() {
+        return this.repository.findAll();
+    }
+
+    @Override
+    public Atencion obtenerAtencion(String id) {
+        return this.repository.findById(id).orElseThrow(()-> new IllegalArgumentException("La atencion no fue encontrada"));
+    }
+
+    @Override
+    public List<Atencion> listarAtencionesFechaDoctor(String idDoctor) {
+        return this.repository.findByFechaAtencionValor(idDoctor);
     }
 }
