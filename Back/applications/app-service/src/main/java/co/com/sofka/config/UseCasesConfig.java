@@ -85,4 +85,8 @@ public class UseCasesConfig {
         public ListarConsultaIdUseCase listarConsultaId(ConsultaRepository consultaRepository){
                 return new ListarConsultaIdUseCase(consultaRepository);
         }
+
+        public ListarMascotaUseCase listarMascotaId(MascotaPokemonRepository mascotaPokemonRepository){
+                return new ListarMascotaUseCase(mascotaPokemonRepository);
+        }
 }
