@@ -7,10 +7,12 @@ import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
 import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRepository;
 import co.com.sofka.usecase.atencion.CreateAtencionUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
+import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonIdUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonUseCase;
 import co.com.sofka.usecase.consulta.*;
 import co.com.sofka.usecase.consulta.mascota.ActualizarMascotaUseCase;
 import co.com.sofka.usecase.consulta.mascota.CreateMascotaUseCase;
+import co.com.sofka.usecase.consulta.mascota.ListarMascotaIdUseCase;
 import co.com.sofka.usecase.consulta.mascota.ListarMascotaUseCase;
 import co.com.sofka.usecase.consulta.usuario.ActualizarUsuarioUseCase;
 import co.com.sofka.usecase.consulta.usuario.CreateUsuarioUseCase;
@@ -86,7 +88,11 @@ public class UseCasesConfig {
                 return new ListarConsultaIdUseCase(consultaRepository);
         }
 
-        public ListarMascotaUseCase listarMascotaId(MascotaPokemonRepository mascotaPokemonRepository){
-                return new ListarMascotaUseCase(mascotaPokemonRepository);
+        public ListarMascotaIdUseCase listarMascotaId(MascotaPokemonRepository mascotaPokemonRepository){
+                return new ListarMascotaIdUseCase(mascotaPokemonRepository);
+        }
+
+        public ListarDoctorPokemonIdUseCase listarDoctorId(DoctorpokemonRepository doctorpokemonRepository){
+                return new ListarDoctorPokemonIdUseCase(doctorpokemonRepository);
         }
 }
