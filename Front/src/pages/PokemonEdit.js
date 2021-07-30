@@ -12,9 +12,10 @@ class PokemonEdit extends React.Component {
     loading: true,
     error: null,
     form: {
+      id:this.props.match.params.pokemonId,
       nombre: '',
       raza: '',
-      tipo: [],
+      tipo: '',
       habilidad: '',
     },
   };
@@ -27,7 +28,6 @@ class PokemonEdit extends React.Component {
     this.setState({ loading: true, error: null });
     try {
       const data = await api.pokemon.read(this.props.match.params.pokemonId);
-      console.log(data)
       this.setState({ loading: false, form: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -48,7 +48,19 @@ class PokemonEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.pokemon.update(this.props.match.params.pokemonId, this.state.form);
+      const data = this.state.form
+
+      const datamorfis = {
+        morfis: {
+          id: this.props.match.params.pokemonId,
+          nombre: data.nombre.valor || data.nombre,
+          raza: data.raza.valor || data.raza,
+          tipo: data.tipo.valor || data.tipo,
+          habilidad: data.habilidad.valor || data.habilidad,
+          },
+      }; 
+
+      await api.pokemon.update(this.props.match.params.pokemonId, datamorfis.morfis);
       this.setState({ loading: false });
 
       this.props.history.push(`/consults/${this.props.match.params.consultId}`);
@@ -61,9 +73,6 @@ class PokemonEdit extends React.Component {
     if (this.state.loading) {
       return <PageLoading />;
     }
-
-    console.log(this.state.form.raza.valor)  
-    console.log(this.state.form.raza)
 
     return (
       <React.Fragment>
@@ -81,7 +90,7 @@ class PokemonEdit extends React.Component {
               <Pokemon
                 raza={this.state.form.raza.valor || this.state.form.raza ||'RAZA'}
                 nombre={this.state.form.nombre.valor || this.state.form.nombre || 'NOMBRE'}
-                tipo={this.state.form.tipo[0].valor || this.state.form.tipo || 'TIPO'}
+                tipo={this.state.form.tipo.valor || this.state.form.tipo || 'TIPO'}
                 habilidad={this.state.form.habilidad.valor || this.state.form.habilidad || 'HABILIDAD'}
                />
             </div>

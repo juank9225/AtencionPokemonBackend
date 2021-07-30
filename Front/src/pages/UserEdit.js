@@ -12,6 +12,7 @@ class BadgeEdit extends React.Component {
     loading: true,
     error: null,
     form: {
+      id:this.props.match.params.userId,
       nombre: '',
       apellido: '',
       correo: '',
@@ -48,7 +49,20 @@ class BadgeEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.usuarios.update(this.props.match.params.userId, this.state.form);
+      const data = this.state.form
+
+      const datamorfis = {
+        morfis:{
+          id:this.props.match.params.userId,
+          nombre: data.nombre.valor || data.nombre,
+          apellido: data.apellido.valor || data.apellido,
+          correo: data.correo.valor || data.correo,
+          profesion: data.profesion.valor || data.profesion,
+          telefono: data.telefono.valor || data.telefono
+        }
+      } 
+
+      await api.usuarios.update(this.props.match.params.userId, datamorfis.morfis);
       this.setState({ loading: false });
 
       this.props.history.push(`/consults/${this.props.match.params.consultId}`);
@@ -61,8 +75,6 @@ class BadgeEdit extends React.Component {
     if (this.state.loading) {
       return <PageLoading />;
     }
-
-    console.log(this.state.form)
 
     return (
       <React.Fragment>
