@@ -11,4 +11,5 @@ import java.util.Optional;
 public interface ConsultaMongoDBRepository extends MongoRepository<Consulta, String> , QueryByExampleExecutor<Consulta> {
     @Transactional(readOnly = true)
     List<Consulta> findByFechaConsultaValor(String fecha);
+    List<Consulta> findByIdUsuario(String idUsuario);
 }

@@ -9,5 +9,5 @@ public interface AtencionRepository {
     List<Atencion> listarAtenciones();
     Atencion obtenerAtencion(String id);
     List<Atencion> listarAtencionesFechaDoctor(String fecha);
-
+    List<Atencion> obtenerAtencionIdDoctor(String idDoctor);
 }

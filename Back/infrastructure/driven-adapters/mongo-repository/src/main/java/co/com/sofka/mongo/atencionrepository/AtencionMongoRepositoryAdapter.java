@@ -41,4 +41,9 @@ public class AtencionMongoRepositoryAdapter extends AdapterOperations<Atencion, 
     public List<Atencion> listarAtencionesFechaDoctor(String idDoctor) {
         return this.repository.findByFechaAtencionValor(idDoctor);
     }
+
+    @Override
+    public List<Atencion> obtenerAtencionIdDoctor(String idDoctor){
+        return this.repository.findByIdDoctor(idDoctor);
+    }
 }

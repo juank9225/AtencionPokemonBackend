@@ -11,4 +11,5 @@ public interface ConsultaRepository {
     List<Consulta> listarConsultasInactivas(String fecha);
     Consulta actualizarConsulta(Consulta consulta);
     Consulta obtenerConsulta(String id);
+    List<Consulta> obtenerConsultaIdUsuario(String id);
 }

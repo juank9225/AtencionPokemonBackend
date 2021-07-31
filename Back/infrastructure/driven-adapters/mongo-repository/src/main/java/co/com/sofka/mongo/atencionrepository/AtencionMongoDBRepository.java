@@ -10,4 +10,5 @@ import java.util.List;
 public interface AtencionMongoDBRepository extends MongoRepository<Atencion, String> , QueryByExampleExecutor<Atencion> {
     @Transactional(readOnly = true)
     List<Atencion> findByFechaAtencionValor(String idDoctor);
+    List<Atencion> findByIdDoctor(String idDoctor);
 }
