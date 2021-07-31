@@ -81,4 +81,5 @@ public class MascotaPokemon {
     public void setHabilidad(Habilidad habilidad) {
         this.habilidad = habilidad;
     }
+
 }
