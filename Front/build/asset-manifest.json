@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.35657d02.chunk.css",
-    "main.js": "/static/js/main.de9811c6.chunk.js",
-    "main.js.map": "/static/js/main.de9811c6.chunk.js.map",
+    "main.css": "/static/css/main.806cb9c6.chunk.css",
+    "main.js": "/static/js/main.4426df6c.chunk.js",
+    "main.js.map": "/static/js/main.4426df6c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9aced56d.js",
     "runtime-main.js.map": "/static/js/runtime-main.9aced56d.js.map",
     "static/css/2.d5e620ed.chunk.css": "/static/css/2.d5e620ed.chunk.css",
-    "static/js/2.ee9ceae6.chunk.js": "/static/js/2.ee9ceae6.chunk.js",
-    "static/js/2.ee9ceae6.chunk.js.map": "/static/js/2.ee9ceae6.chunk.js.map",
+    "static/js/2.b206e485.chunk.js": "/static/js/2.b206e485.chunk.js",
+    "static/js/2.b206e485.chunk.js.map": "/static/js/2.b206e485.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d5e620ed.chunk.css.map": "/static/css/2.d5e620ed.chunk.css.map",
-    "static/css/main.35657d02.chunk.css.map": "/static/css/main.35657d02.chunk.css.map",
-    "static/js/2.ee9ceae6.chunk.js.LICENSE.txt": "/static/js/2.ee9ceae6.chunk.js.LICENSE.txt",
+    "static/css/main.806cb9c6.chunk.css.map": "/static/css/main.806cb9c6.chunk.css.map",
+    "static/js/2.b206e485.chunk.js.LICENSE.txt": "/static/js/2.b206e485.chunk.js.LICENSE.txt",
     "static/media/cinco.cd5eebe8.svg": "/static/media/cinco.cd5eebe8.svg",
     "static/media/cuatro.3c182770.svg": "/static/media/cuatro.3c182770.svg",
     "static/media/descarga.64871c7e.png": "/static/media/descarga.64871c7e.png",
     "static/media/dos.15e25bce.svg": "/static/media/dos.15e25bce.svg",
     "static/media/gigli.7bbb633f.svg": "/static/media/gigli.7bbb633f.svg",
     "static/media/logo.2803dbe7.png": "/static/media/logo.2803dbe7.png",
+    "static/media/magneton.087de146.gif": "/static/media/magneton.087de146.gif",
     "static/media/meoth.0e9821f9.svg": "/static/media/meoth.0e9821f9.svg",
     "static/media/nueve.cbab120d.svg": "/static/media/nueve.cbab120d.svg",
     "static/media/ocho.61da9b28.svg": "/static/media/ocho.61da9b28.svg",
@@ -31,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.9aced56d.js",
     "static/css/2.d5e620ed.chunk.css",
-    "static/js/2.ee9ceae6.chunk.js",
-    "static/css/main.35657d02.chunk.css",
-    "static/js/main.de9811c6.chunk.js"
+    "static/js/2.b206e485.chunk.js",
+    "static/css/main.806cb9c6.chunk.css",
+    "static/js/main.4426df6c.chunk.js"
   ]
 }
