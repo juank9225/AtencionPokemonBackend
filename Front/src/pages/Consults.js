@@ -8,6 +8,7 @@ import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import MiniLoader from '../components/MiniLoader';
 import api from '../api';
+import { auth } from '../firebase';
 
 class Consults extends React.Component {
   state = {
@@ -34,7 +35,6 @@ class Consults extends React.Component {
 
     try {
       const data = await api.consults.list()
-
       //const userID = await api.usuarios.read(data[0].idUsuario);
       //const pokeID = await api.pokemon.read(data[0].idMascotaPokemon);
       
@@ -83,6 +83,11 @@ class Consults extends React.Component {
       return <PageError error={this.state.error} />;
     }
 
+    const log = (event)=>{
+      event.preventDefault()
+      auth().signOut()
+    }
+
     return (
       <React.Fragment>
         <div className="Badges">
@@ -99,7 +104,10 @@ class Consults extends React.Component {
 
         <div className="Badges__container">
           <div className="Badges__buttons">
-            <Link to="/consults/usernew" className="btn btn-primary">
+          <Link className="btn btn-warning"  onClick={log} >
+            Logout
+          </Link>
+            <Link to={`/consults/pokemonnew`} className="btn btn-primary">
               New Consult
             </Link>
           </div>

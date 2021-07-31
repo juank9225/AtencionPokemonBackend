@@ -5,9 +5,24 @@ import './styles/Home.css';
 import Meoth from '../images/meoth.svg';
 import Gigli from '../images/gigli.svg';
 import pok from '../images/vulpix.png';
+import { signInWithGoogle} from '../Auth';
+import { auth } from '../firebase';
 
 export default class Home extends Component {
+  
   render() {
+
+    const login = () => {
+      signInWithGoogle().then(r => {
+        console.log("success")
+        console.log(auth().currentUser)
+        setTimeout(this.props.history.push(`/consults/usernew`), 3000)
+        console.log(":v")
+    }).catch(error => {
+        console.log(error)
+    })
+    }
+
     return ( 
       <div className="Home">
         <div className="container">
@@ -20,7 +35,7 @@ export default class Home extends Component {
               />
 
               <h1>Usuario Pokemon</h1>
-              <Link className="btn btn-primary" to="/consults">
+              <Link className="btn btn-primary" onClick={login}>
                 Start
               </Link>
             </div>

@@ -6,6 +6,7 @@ class BadgeForm extends React.Component {
   };
 
   render() {
+    console.log(this.props.formValues)
     return (
       <div>
         <form onSubmit={this.props.onSubmit}>
@@ -16,7 +17,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="nombre"
-              value={this.props.formValues.nombre.valor}
+              value={this.props.formValues.nombre.valor || this.props.formValues.nombre}
             />
           </div>
 
@@ -38,7 +39,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="email"
               name="correo"
-              value={this.props.formValues.correo.valor}
+              value={this.props.formValues.correo.valor || this.props.formValues.correo}
             />
           </div>
 

@@ -100,7 +100,7 @@ class ConsultEdit extends React.Component {
             </div>
 
             <div className="col-6">
-              <h1>Editar Usuario</h1>
+              <h1>Editar Consulta</h1>
               <ConsultForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}

@@ -6,6 +6,7 @@ import Consulta from '../components/Consulta';
 import ConsultForm from '../components/ConsultForm';
 import PageLoading from '../components/PageLoading';
 import api from '../api';
+import { auth } from '../firebase';
 
 class ConsultNew extends React.Component {
   state = {
@@ -16,7 +17,7 @@ class ConsultNew extends React.Component {
       causaEnfermedad: '',
       sintomas: '',
       estadoRevision: false,
-      idUsuario: this.props.match.params.userId,
+      idUsuario: auth().currentUser.uid,
       idMascotaPokemon: this.props.match.params.pokemonId
     },
   };

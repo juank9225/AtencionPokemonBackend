@@ -1,6 +1,7 @@
 import React from 'react';
 
-class BadgeForm extends React.Component {
+
+class UserForm extends React.Component {
   handleClick = e => {
     console.log('Button was clicked');
   };
@@ -77,4 +78,4 @@ class BadgeForm extends React.Component {
   }
 }
 
-export default BadgeForm;
+export default UserForm;

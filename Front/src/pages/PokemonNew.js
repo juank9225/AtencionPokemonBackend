@@ -35,7 +35,7 @@ class PokemonNew extends React.Component {
       const response = await api.pokemon.create(this.state.form);
       this.setState({ loading: false });
 
-      this.props.history.push(`/consults/consultnew/${this.props.match.params.userId}/${response.id}`);
+      this.props.history.push(`/consults/consultnew/${response.id}`);
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
