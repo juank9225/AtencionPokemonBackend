@@ -9,6 +9,7 @@ import co.com.sofka.model.atencion.values.valueobjectatencion.FechaDeAtencion;
 import co.com.sofka.model.atencion.values.valueobjectdoctor.*;
 import co.com.sofka.model.consulta.Consulta;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,6 +29,7 @@ class CreateAtencionUseCaseTest {
     private CreateAtencionUseCase createAtencionUseCase;
 
     @Test
+    @DisplayName("Test crear atencion happy test")
     public void crearAtencionHappyTest() {
         Doctorpokemon doctorpokemon = new Doctorpokemon("xxxx",
                 new Identificacion(134354343L),
@@ -54,6 +56,7 @@ class CreateAtencionUseCaseTest {
     }
 
     @Test
+    @DisplayName("Test crear atencion sad test")
     public void crearAtencionSadTest() {
         Doctorpokemon doctorpokemon = new Doctorpokemon("xxxx",
                 new Identificacion(134354343L),
