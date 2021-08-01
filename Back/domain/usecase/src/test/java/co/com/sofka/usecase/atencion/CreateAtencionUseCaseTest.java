@@ -40,7 +40,8 @@ class CreateAtencionUseCaseTest {
                 new Especialidad("pokemon tipo agua")
         );
 
-        Atencion atencion = new Atencion("3434545",
+        Atencion atencion = new Atencion("xxxx",
+                "3434545",
                 "xxxx",
                 new Diagnostico("El pokemón debe llevarse al hospital"),
                 new FechaDeAtencion("30-01-2021")
