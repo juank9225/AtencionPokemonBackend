@@ -3,14 +3,12 @@ import co.com.sofka.model.consulta.values.valueobjectmascota.*;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 @Builder(toBuilder = true)
 public class MascotaPokemon {
     private String id;
-    private Identificacion identificacion;
-    private Nombre nombre;
+    private IdentificacionMascota identificacionMascota;
+    private NombrePokemon nombrePokemon;
     private Raza raza;
     private Tipo tipo;
     private Habilidad habilidad;
@@ -18,17 +16,17 @@ public class MascotaPokemon {
     public MascotaPokemon() {
     }
 
-    public MascotaPokemon(String id, Identificacion identificacion, Nombre nombre, Raza raza, Tipo tipo, Habilidad habilidad) {
+    public MascotaPokemon(String id, IdentificacionMascota identificacionMascota, NombrePokemon nombrePokemon, Raza raza, Tipo tipo, Habilidad habilidad) {
         this.id = id;
-        this.identificacion = identificacion;
-        this.nombre = nombre;
+        this.identificacionMascota = identificacionMascota;
+        this.nombrePokemon = nombrePokemon;
         this.raza = raza;
         this.tipo = tipo;
         this.habilidad = habilidad;
     }
 
-    public MascotaPokemon(Nombre nombre, Raza raza, Tipo tipo, Habilidad habilidad) {
-        this.nombre = nombre;
+    public MascotaPokemon(NombrePokemon nombrePokemon, Raza raza, Tipo tipo, Habilidad habilidad) {
+        this.nombrePokemon = nombrePokemon;
         this.raza = raza;
         this.tipo = tipo;
         this.habilidad = habilidad;
@@ -42,20 +40,20 @@ public class MascotaPokemon {
         this.id = id;
     }
 
-    public Identificacion getIdentificacion() {
-        return identificacion;
+    public IdentificacionMascota getIdentificacionMascota() {
+        return identificacionMascota;
     }
 
-    public void setIdentificacion(Identificacion identificacion) {
-        this.identificacion = identificacion;
+    public void setIdentificacionMascota(IdentificacionMascota identificacionMascota) {
+        this.identificacionMascota = identificacionMascota;
     }
 
-    public Nombre getNombre() {
-        return nombre;
+    public NombrePokemon getNombrePokemon() {
+        return nombrePokemon;
     }
 
-    public void setNombre(Nombre nombre) {
-        this.nombre = nombre;
+    public void setNombrePokemon(NombrePokemon nombrePokemon) {
+        this.nombrePokemon = nombrePokemon;
     }
 
     public Raza getRaza() {

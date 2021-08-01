@@ -21,8 +21,8 @@ class CreateMascotaUseCaseTest {
     @Test
     public void testsCrearMascota() {
         MascotaPokemon mascotaPokemon = new MascotaPokemon("xxxx",
-                new Identificacion(1786411L),
-                new Nombre("Kali"),
+                new IdentificacionMascota(1786411L),
+                new NombrePokemon("Kali"),
                 new Raza("Sandshrew"),
                 new Tipo("Tierra"),
                 new Habilidad("Velo Arena")
@@ -31,8 +31,8 @@ class CreateMascotaUseCaseTest {
         MascotaPokemon resp = createMascotaUseCase.crearMascota(mascotaPokemon);
 
         Assertions.assertEquals(resp.getId(), "xxxx");
-        Assertions.assertEquals(resp.getIdentificacion().getValor(),(Long) 1786411L);
-        Assertions.assertEquals(resp.getNombre().getValor(), "Kali");
+        Assertions.assertEquals(resp.getIdentificacionMascota().getValor(),(Long) 1786411L);
+        Assertions.assertEquals(resp.getNombrePokemon().getValor(), "Kali");
         Assertions.assertEquals(resp.getRaza().getValor(), "Sandshrew");
         Assertions.assertEquals(resp.getTipo().getValor(), "Tierra");
         Assertions.assertEquals(resp.getHabilidad().getValor(), "Velo Arena");

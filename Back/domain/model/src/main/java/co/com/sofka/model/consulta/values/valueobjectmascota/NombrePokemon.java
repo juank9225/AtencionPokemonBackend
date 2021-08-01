@@ -2,10 +2,10 @@ package co.com.sofka.model.consulta.values.valueobjectmascota;
 
 import java.util.Objects;
 
-public class Nombre {
+public class NombrePokemon {
     private final String valor;
 
-    public Nombre(String valor) {
+    public NombrePokemon(String valor) {
         this.valor = Objects.requireNonNull(valor,"el nombre es requerido");
         if (this.valor.isEmpty()){
             throw new IllegalArgumentException("el nombre no puede ser vacio");
@@ -23,8 +23,8 @@ public class Nombre {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Nombre nombre = (Nombre) o;
-        return Objects.equals(valor, nombre.valor);
+        NombrePokemon nombrePokemon = (NombrePokemon) o;
+        return Objects.equals(valor, nombrePokemon.valor);
     }
 
     @Override

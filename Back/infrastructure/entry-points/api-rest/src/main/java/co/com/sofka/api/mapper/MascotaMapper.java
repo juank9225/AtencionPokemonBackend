@@ -13,8 +13,8 @@ public class MascotaMapper {
     public MascotaPokemon fromDTO(MascotaDTO mascotaDTO){
         MascotaPokemon mascotaPokemon = new MascotaPokemon();
         mascotaPokemon.setId(mascotaDTO.getId());
-        mascotaPokemon.setIdentificacion(mascotaDTO.getIdentificacion());
-        mascotaPokemon.setNombre(mascotaDTO.getNombre());
+        mascotaPokemon.setIdentificacionMascota(mascotaDTO.getIdentificacion());
+        mascotaPokemon.setNombrePokemon(mascotaDTO.getNombre());
         mascotaPokemon.setRaza(mascotaDTO.getRaza());
         mascotaPokemon.setTipo(mascotaDTO.getTipo());
         mascotaPokemon.setHabilidad(mascotaDTO.getHabilidad());
@@ -25,8 +25,8 @@ public class MascotaMapper {
     public MascotaDTO fromModel(MascotaPokemon mascotaPokemon){
         MascotaDTO mascotaDTO = new MascotaDTO();
         mascotaDTO.setId(mascotaPokemon.getId());
-        mascotaDTO.setIdentificacion(mascotaPokemon.getIdentificacion());
-        mascotaDTO.setNombre(mascotaPokemon.getNombre());
+        mascotaDTO.setIdentificacion(mascotaPokemon.getIdentificacionMascota());
+        mascotaDTO.setNombre(mascotaPokemon.getNombrePokemon());
         mascotaDTO.setRaza(mascotaPokemon.getRaza());
         mascotaDTO.setTipo(mascotaPokemon.getTipo());
         mascotaDTO.setHabilidad(mascotaPokemon.getHabilidad());

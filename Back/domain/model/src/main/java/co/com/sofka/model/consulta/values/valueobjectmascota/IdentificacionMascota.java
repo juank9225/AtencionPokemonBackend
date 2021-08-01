@@ -2,10 +2,10 @@ package co.com.sofka.model.consulta.values.valueobjectmascota;
 
 import java.util.Objects;
 
-public class Identificacion {
+public class IdentificacionMascota {
     private final Long valor;
 
-    public Identificacion(Long valor) {
+    public IdentificacionMascota(Long valor) {
         this.valor = valor;
     }
 
@@ -17,7 +17,7 @@ public class Identificacion {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Identificacion that = (Identificacion) o;
+        IdentificacionMascota that = (IdentificacionMascota) o;
         return Objects.equals(valor, that.valor);
     }
 

@@ -10,9 +10,7 @@ import co.com.sofka.model.consulta.values.valueobjectconsulta.CausaEnfermedad;
 import co.com.sofka.model.consulta.values.valueobjectconsulta.EstadoRevision;
 import co.com.sofka.model.consulta.values.valueobjectconsulta.FechaConsulta;
 import co.com.sofka.model.consulta.values.valueobjectconsulta.Sintomas;
-import co.com.sofka.model.consulta.values.valueobjectmascota.Habilidad;
-import co.com.sofka.model.consulta.values.valueobjectmascota.Raza;
-import co.com.sofka.model.consulta.values.valueobjectmascota.Tipo;
+import co.com.sofka.model.consulta.values.valueobjectmascota.*;
 import co.com.sofka.model.consulta.values.valueobjectuser.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -48,8 +46,8 @@ class CreateConsultaUseCaseTest {
                 new Correo("juank9223@gamil.com")
         );
         MascotaPokemon mascota = new MascotaPokemon("2222",
-                new co.com.sofka.model.consulta.values.valueobjectmascota.Identificacion(178823411L),
-                new co.com.sofka.model.consulta.values.valueobjectmascota.Nombre("changuas"),
+                new IdentificacionMascota(178823411L),
+                new NombrePokemon("changuas"),
                 new Raza("pikachu"),
                 new Tipo("electrico"),
                 new Habilidad("lanza rayos"));
