@@ -51,4 +51,9 @@ public class AtencionMongoRepositoryAdapter extends AdapterOperations<Atencion, 
     public List<Atencion> obtenerAtencionesXConsulta(String id) {
         return repository.findByidConsulta(id);
     }
+
+    @Override
+    public Atencion actualizarAtencion(Atencion atencion) {
+        return repository.save(atencion);
+    }
 }

@@ -13,15 +13,11 @@ import lombok.RequiredArgsConstructor;
 public class CreateAtencionUseCase {
     private final AtencionRepository atencionRepository;
     private final DoctorpokemonRepository doctorpokemonRepository;
-    private final ConsultaRepository consultaRepository;
 
     public Atencion crearatencion(Atencion atencion){
         Doctorpokemon doctor = doctorpokemonRepository.obtenerDoctor(atencion.getIdDoctor());
-        Consulta consulta = consultaRepository.obtenerConsulta(atencion.getIdConsulta());
-        if (!doctor.getId().isEmpty() && !consulta.getEstadoRevision().getValor()){
+        if (!doctor.getId().isEmpty()){
             Atencion atencionCreada = atencionRepository.crearAtencion(atencion);
-            consulta.setEstadoRevision(new EstadoRevision(true));
-            consultaRepository.actualizarConsulta(consulta);
             return atencionCreada;
         }
         throw new  IllegalArgumentException("la atencion no se pudo crear correctamente.");

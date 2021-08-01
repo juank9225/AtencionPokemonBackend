@@ -52,8 +52,8 @@ public class UseCasesConfig {
                 return new CreateDoctorPokemonUseCase(doctorpokemonRepository);
         }
 
-        public CreateAtencionUseCase crearAtencion(AtencionRepository atencionRepository, DoctorpokemonRepository doctorpokemonRepository, ConsultaRepository consultaRepository){
-                return new CreateAtencionUseCase(atencionRepository,doctorpokemonRepository,consultaRepository);
+        public CreateAtencionUseCase crearAtencion(AtencionRepository atencionRepository, DoctorpokemonRepository doctorpokemonRepository){
+                return new CreateAtencionUseCase(atencionRepository,doctorpokemonRepository);
         }
 
         public ListarDoctorPokemonUseCase listarDoctores(DoctorpokemonRepository doctorpokemonRepository){
@@ -114,5 +114,9 @@ public class UseCasesConfig {
 
         public ObtenerAtencionesXConsultasUseCase obtenerAtencionesXConsultas(AtencionRepository atencionRepository){
                 return new ObtenerAtencionesXConsultasUseCase(atencionRepository);
+        }
+
+        public  ActualizarAtencionesUseCase actualizarAtenciones(AtencionRepository atencionRepository, ConsultaRepository consultaRepository){
+                return new ActualizarAtencionesUseCase(atencionRepository,consultaRepository);
         }
 }
