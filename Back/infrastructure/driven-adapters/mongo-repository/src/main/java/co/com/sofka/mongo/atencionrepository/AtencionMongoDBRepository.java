@@ -11,4 +11,5 @@ public interface AtencionMongoDBRepository extends MongoRepository<Atencion, Str
     @Transactional(readOnly = true)
     List<Atencion> findByFechaAtencionValor(String idDoctor);
     List<Atencion> findByIdDoctor(String idDoctor);
+    List<Atencion> findByidConsulta(String id);
 }

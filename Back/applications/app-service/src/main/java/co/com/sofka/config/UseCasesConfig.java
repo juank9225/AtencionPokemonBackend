@@ -5,14 +5,10 @@ import co.com.sofka.model.consulta.gateways.ConsultaRepository;
 import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemonRepository;
 import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
 import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRepository;
-import co.com.sofka.usecase.atencion.CreateAtencionUseCase;
-import co.com.sofka.usecase.atencion.ListarAtencionIdUseCase;
-import co.com.sofka.usecase.atencion.ListarAtencionesFechaDoctorUseCase;
-import co.com.sofka.usecase.atencion.ListarAtencionesUseCase;
+import co.com.sofka.usecase.atencion.*;
 import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonIdUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonUseCase;
-import co.com.sofka.usecase.atencion.ObtenerAtencionIdDoctorUseCase;
 import co.com.sofka.usecase.consulta.*;
 import co.com.sofka.usecase.consulta.mascota.ActualizarMascotaUseCase;
 import co.com.sofka.usecase.consulta.mascota.CreateMascotaUseCase;
@@ -114,5 +110,9 @@ public class UseCasesConfig {
 
         public ObtenerAtencionIdDoctorUseCase obtenerAtencionIdDoctor(AtencionRepository atencionRepository){
                 return new ObtenerAtencionIdDoctorUseCase(atencionRepository);
+        }
+
+        public ObtenerAtencionesXConsultasUseCase obtenerAtencionesXConsultas(AtencionRepository atencionRepository){
+                return new ObtenerAtencionesXConsultasUseCase(atencionRepository);
         }
 }

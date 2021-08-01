@@ -46,4 +46,9 @@ public class AtencionMongoRepositoryAdapter extends AdapterOperations<Atencion, 
     public List<Atencion> obtenerAtencionIdDoctor(String idDoctor){
         return this.repository.findByIdDoctor(idDoctor);
     }
+
+    @Override
+    public List<Atencion> obtenerAtencionesXConsulta(String id) {
+        return repository.findByidConsulta(id);
+    }
 }
