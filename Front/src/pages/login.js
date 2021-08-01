@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 import './styles/Home.css';
-import Meoth from '../images/meoth.svg';
-import pok from '../images/vulpix.png';
+import pok from '../images/Pokemons.png';
 import { signInWithGoogle} from '../Auth';
 
 export default class Home extends Component {
@@ -22,19 +21,16 @@ export default class Home extends Component {
         <div className="container">
           <div className="row">
             <div className="Home__col col-12 col-md-4">
-              <img
-                src={Meoth}
-                alt="Platzi Conf Logo"
-                className="img-fluid mb-2"
-              />
-
-              <h1>Usuario Pokemon</h1>
+              <h1>Bienvenido A<br>
+              </br>
+              Consultas Pokemon
+              </h1>
               <button className="btn btn-primary" onClick={login}>
                 Start
               </button>
             </div>
 
-            <div className="Home__col d-none d-md-block col-md-4">
+            <div className="Home__col d-none d-md-block col-md-8">
               <img
                 src={pok}
                 alt="Astronauts"
