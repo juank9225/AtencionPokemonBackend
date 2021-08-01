@@ -76,6 +76,7 @@ class App extends Component {
         <PrivateRoute exact path = "/consults/:userId/edituser/:consultId" authenticated = {this.state.authenticated} component = {UserEdit} />
         <PrivateRoute exact path = "/consults/:pokemonId/editpokemon/:consultId" authenticated = {this.state.authenticated} component = {PokemonEdit} />
         <PrivateRoute exact path = "/consults/:consultId/editconsult" authenticated = {this.state.authenticated} component = {ConsultEdit} />
+        <PrivateRoute exact path = "/atencion/:atencionId" authenticated = {this.state.authenticated} component = {ConsultDetails} />
         <Route component={NotFound} />
         </Switch>
       </Layout>
