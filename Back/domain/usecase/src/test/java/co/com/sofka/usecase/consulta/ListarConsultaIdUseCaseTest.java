@@ -14,17 +14,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 
-@SpringBootTest(classes = ActualizarConsultaUseCase.class)
-class ActualizarConsultaUseCaseTest {
+import static org.junit.jupiter.api.Assertions.*;
+@SpringBootTest(classes = ListarConsultaIdUseCase.class)
+class ListarConsultaIdUseCaseTest {
     @MockBean
     private ConsultaRepository consultaRepository;
 
     @SpyBean
-    private ActualizarConsultaUseCase actualizarConsultaUseCase;
+    private ListarConsultaIdUseCase listarConsultaIdUseCase;
 
     @Test
-    @DisplayName("Test actualizar consulta happy test")
-    public void crearConsultaHappyTest() {
+    @DisplayName("Happy Test listar consalta por Id")
+    public void listarConsultaIdHappyTest(){
 
         Consulta consulta = new Consulta("3333",
                 new FechaConsulta("30-07-201"),
@@ -36,18 +37,17 @@ class ActualizarConsultaUseCaseTest {
         );
 
         Mockito.when(consultaRepository.obtenerConsulta(consulta.getId())).thenReturn(consulta);
-        Mockito.when(consultaRepository.actualizarConsulta(consulta)).thenReturn(consulta);
 
-        Consulta resp = actualizarConsultaUseCase.actualizarConsulta(consulta);
+        Consulta resp = listarConsultaIdUseCase.obtenerConsulta(consulta.getId());
 
         Assertions.assertEquals(resp.getId(),"3333");
-        Assertions.assertEquals(resp.getCausaEnfermedad().getValor(),"pelea con otro pokemon");
         Assertions.assertEquals(resp.getSintomas().getValor(),"dolor en el cuerpo");
+        Assertions.assertEquals(resp.getCausaEnfermedad().getValor(),"pelea con otro pokemon");
     }
 
     @Test
-    @DisplayName("Test actualizar consulta sad test")
-    public void crearConsultaSadTest() {
+    @DisplayName("Sab Test listar consalta por Id")
+    public void listarConsultaIdSabTest(){
 
         Consulta consulta = new Consulta("3333",
                 new FechaConsulta("30-07-201"),
@@ -58,11 +58,11 @@ class ActualizarConsultaUseCaseTest {
                 "2222"
         );
 
-        Mockito.when(consultaRepository.obtenerConsulta("33333")).thenReturn(consulta);
-        Mockito.when(consultaRepository.actualizarConsulta(consulta)).thenReturn(consulta);
+        Mockito.when(consultaRepository.obtenerConsulta(consulta.getId())).thenThrow(IllegalArgumentException.class);
 
-        Assertions.assertThrows(NullPointerException.class,()->{
-            actualizarConsultaUseCase.actualizarConsulta(consulta);
+        Assertions.assertThrows(IllegalArgumentException.class,()->{
+            listarConsultaIdUseCase.obtenerConsulta(consulta.getId());
         });
     }
+
 }
