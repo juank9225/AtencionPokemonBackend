@@ -8,4 +8,6 @@ public interface DoctorpokemonRepository {
     Doctorpokemon crearDoctor(Doctorpokemon doctorpokemon);
     List<Doctorpokemon> listarDoctores();
     Doctorpokemon obtenerDoctor(String id);
+    Doctorpokemon actualizarDoctor(Doctorpokemon doctorpokemon);
+
 }

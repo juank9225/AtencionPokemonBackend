@@ -6,6 +6,7 @@ import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemon
 import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
 import co.com.sofka.model.atencion.entity.doctorpokemon.gateways.DoctorpokemonRepository;
 import co.com.sofka.usecase.atencion.*;
+import co.com.sofka.usecase.atencion.doctorpokemon.ActualizarDoctorUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.CreateDoctorPokemonUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonIdUseCase;
 import co.com.sofka.usecase.atencion.doctorpokemon.ListarDoctorPokemonUseCase;
@@ -118,5 +119,9 @@ public class UseCasesConfig {
 
         public  ActualizarAtencionesUseCase actualizarAtenciones(AtencionRepository atencionRepository, ConsultaRepository consultaRepository){
                 return new ActualizarAtencionesUseCase(atencionRepository,consultaRepository);
+        }
+
+        public ActualizarDoctorUseCase actualizarDoctor(DoctorpokemonRepository doctorpokemonRepository){
+                return new ActualizarDoctorUseCase(doctorpokemonRepository);
         }
 }
