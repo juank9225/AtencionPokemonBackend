@@ -74,9 +74,7 @@ class BadgeEdit extends React.Component {
       const creacion = await api.usuarios.create(datamorfis.morfis);
       this.setState({ loading: false });
 
-      console.log(creacion)
-
-      this.props.history.push(`/consults`);
+      this.props.history.push(`/consults/pokemonnew`);
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
