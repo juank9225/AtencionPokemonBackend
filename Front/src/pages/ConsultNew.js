@@ -36,7 +36,17 @@ class ConsultNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.consults.create(this.state.form);
+
+      const response = await api.consults.create(this.state.form);
+      console.log(response.fechaConsulta.valor)
+      const predeterminada = {
+        idConsulta: response.id,
+        idDoctor: "61060fc1ef19566bacf38909",
+        diagnostico: "no atendida aun",
+        fechaAtencion: response.fechaConsulta.valor
+      }
+      const respon = await api.atenciones.create(predeterminada);
+      console.log(respon)
       this.setState({ loading: false });
       this.props.history.push('/consults');
     } catch (error) {

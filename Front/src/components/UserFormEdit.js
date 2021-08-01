@@ -6,7 +6,6 @@ class BadgeForm extends React.Component {
   };
 
   render() {
-    console.log(this.props.formValues)
     return (
       <div>
         <form onSubmit={this.props.onSubmit}>

@@ -14,10 +14,7 @@ export default class Home extends Component {
 
     const login = () => {
       signInWithGoogle().then(r => {
-        console.log("success")
-        console.log(auth().currentUser)
-        setTimeout(this.props.history.push(`/consults/usernew`), 3000)
-        console.log(":v")
+        this.props.history.push(`/consults/usernew`)
     }).catch(error => {
         console.log(error)
     })
@@ -35,9 +32,9 @@ export default class Home extends Component {
               />
 
               <h1>Usuario Pokemon</h1>
-              <Link className="btn btn-primary" onClick={login}>
+              <button className="btn btn-primary" onClick={login}>
                 Start
-              </Link>
+              </button>
             </div>
 
             <div className="Home__col d-none d-md-block col-md-4">
