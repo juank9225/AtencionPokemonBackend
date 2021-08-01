@@ -34,13 +34,13 @@ class ActualizarAtencionesUseCaseTest {
     @Test
     @DisplayName("Test actualizar atencion happy test")
     public void crearAtencionHappyTest() {
-        Atencion atencion = new Atencion("3434545",
+        Atencion atencion = new Atencion("xxxxx",
+                "3434545",
                 "xxxx",
                 new Diagnostico("El pokemón debe llevarse al hospital"),
                 new FechaDeAtencion("30-01-2021")
         );
-
-        Consulta consulta = new Consulta("3333",
+        Consulta consulta = new Consulta("3434545",
                 new FechaConsulta("30-07-201"),
                 new CausaEnfermedad("pelea con otro pokemon"),
                 new Sintomas("dolor en el cuerpo"),
@@ -49,14 +49,14 @@ class ActualizarAtencionesUseCaseTest {
                 "2222"
         );
 
-        Mockito.when(atencionRepository.obtenerAtencion("34344545")).thenReturn(atencion);
-        Mockito.when(consultaRepository.obtenerConsulta(atencion.getId())).thenReturn(consulta);
+        Mockito.when(atencionRepository.obtenerAtencion(atencion.getId())).thenReturn(atencion);
+        Mockito.when(consultaRepository.obtenerConsulta(atencion.getIdConsulta())).thenReturn(consulta);
         Mockito.when(consultaRepository.actualizarConsulta(consulta)).thenReturn(consulta);
         Mockito.when(atencionRepository.actualizarAtencion(atencion)).thenReturn(atencion);
 
         Atencion resp = actualizarAtencionesUseCase.actualizarAtencion(atencion);
 
-        Assertions.assertEquals(resp.getId(),"3333");
+        Assertions.assertEquals(resp.getId(),"xxxxx");
         Assertions.assertEquals(resp.getDiagnostico().getValor(),"El pokemón debe llevarse al hospital");
 
     }
