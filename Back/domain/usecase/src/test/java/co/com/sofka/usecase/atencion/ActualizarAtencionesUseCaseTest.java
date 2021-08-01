@@ -28,8 +28,6 @@ class ActualizarAtencionesUseCaseTest {
 
     @SpyBean
     private ActualizarAtencionesUseCase actualizarAtencionesUseCase;
-    @SpyBean
-    private ActualizarConsultaUseCase actualizarConsultaUseCase;
 
     @Test
     @DisplayName("Test actualizar atencion happy test")
@@ -58,7 +56,6 @@ class ActualizarAtencionesUseCaseTest {
 
         Assertions.assertEquals(resp.getId(),"xxxxx");
         Assertions.assertEquals(resp.getDiagnostico().getValor(),"El pokemón debe llevarse al hospital");
-
     }
 }
 
