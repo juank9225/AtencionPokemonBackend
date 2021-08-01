@@ -1,6 +1,5 @@
 package co.com.sofka.usecase.consulta;
 
-
 import co.com.sofka.model.consulta.Consulta;
 import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
 import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemonRepository;
@@ -97,7 +96,6 @@ class CreateConsultaUseCaseTest {
         Mockito.when(usuarioRepository.obtenerUsuario(consulta.getIdUsuario())).thenReturn(usuario);
         Mockito.when(mascotaPokemonRepository.obtenerMascota("2222")).thenReturn(null);
         Mockito.when(consultaRepository.crearConsulta(consulta)).thenReturn(consulta);
-
 
         Assertions.assertThrows(NullPointerException.class,()->{
             createConsultaUseCase.crearConsulta(consulta);
