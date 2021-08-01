@@ -52,14 +52,14 @@ class CreateConsultaUseCaseTest {
                 new Tipo("electrico"),
                 new Habilidad("lanza rayos"));
 
-    Consulta consulta = new Consulta("3333",
+        Consulta consulta = new Consulta("3333",
             new FechaConsulta("30-07-201"),
             new CausaEnfermedad("pelea con otro pokemon"),
             new Sintomas("dolor en el cuerpo"),
             new EstadoRevision(false),
             "1111",
             "2222"
-    );
+        );
 
         Mockito.when(usuarioRepository.obtenerUsuario(consulta.getIdUsuario())).thenReturn(usuario);
         Mockito.when(mascotaPokemonRepository.obtenerMascota(consulta.getIdMascotaPokemon())).thenReturn(mascota);
@@ -72,8 +72,8 @@ class CreateConsultaUseCaseTest {
     }
 
     @Test
-    @DisplayName("Test crear consulta sab test")
-    public void crearConsultaSabTest() {
+    @DisplayName("Test crear consulta sad test")
+    public void crearConsultaSadTest() {
         Usuario usuario = new Usuario("1111",
                 new Identificacion(178823411L),
                 new Nombre("juan"),
