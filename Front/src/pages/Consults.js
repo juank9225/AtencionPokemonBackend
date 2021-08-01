@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles/Consults.css';
 import confLogo from '../images/descarga.png';
 import ConsultList from '../components/ConsultList';
+import AtendList from '../components/AtendList';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import MiniLoader from '../components/MiniLoader';
@@ -34,15 +35,19 @@ class Consults extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      const data = await api.consults.list()
+      const data = await api.consults.listByIDUser(auth().currentUser.uid)
+      //const data = await api.consults.list()
+      const atend = await api.atenciones.list()
       //const userID = await api.usuarios.read(data[0].idUsuario);
       //const pokeID = await api.pokemon.read(data[0].idMascotaPokemon);
-      
       const user = await api.usuarios.list();
       const poke = await api.pokemon.list();
       var userID
       var pokemonID
       var userid
+      var consultaid
+      var atencionid
+      var atencionID
       var consultaidU
       var consultaidP
       var pokemonid
@@ -62,10 +67,17 @@ class Consults extends React.Component {
           return pokemonid === consultaidP;
         }
 
+        function filterAtByIDC(value, index, array) {
+          consultaid = consult.id
+          atencionid = value.idConsulta
+          return consultaid === atencionid;
+        }
+
         userID = user.filter(filterByID)
         pokemonID = poke.filter(filterByIDP)
+        atencionID = atend.filter(filterAtByIDC)
 
-        return [consult , userID[0] , pokemonID[0]]
+        return [consult , userID[0] , pokemonID[0], atencionID[0]]
       })
 
       this.setState({ loading: false, data: data, consulta:datamorfis });
@@ -102,7 +114,7 @@ class Consults extends React.Component {
           </div>
         </div>
 
-        <div className="Badges__container">
+        <div className="container">
           <div className="Badges__buttons">
           <Link className="btn btn-warning"  onClick={log} >
             Logout
@@ -111,8 +123,16 @@ class Consults extends React.Component {
               New Consult
             </Link>
           </div>
-
-          <ConsultList consults = {this.state.consulta} />
+          <div className="container">
+          <div className="row">
+            <div className="col-6">
+            <ConsultList consults = {this.state.consulta} />
+            </div>
+            <div className="col-6">
+            <AtendList consults = {this.state.consulta} />
+            </div>
+          </div>
+          </div>
         </div>
 
         {this.state.loading && <MiniLoader />}

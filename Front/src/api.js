@@ -28,6 +28,10 @@ const api = {
     list() {
       return callApi('/listar/consultas');
     },
+    listByIDUser(idUser) {
+      return callApi(`/listar/consulta/usuario/${idUser}`);
+    }
+    ,
     create(consult) {
       // throw new Error('500: Server error');
       return callApi(`/crear/consulta`, {
@@ -50,6 +54,27 @@ const api = {
         method: 'DELETE',
       });
     },
+  },
+  atenciones:{
+    list(){
+      return callApi('/listar/atenciones');
+    },
+    create(consult) {
+      // throw new Error('500: Server error');
+      return callApi(`/crear/atencion`, {
+        method: 'POST',
+        body: JSON.stringify(consult),
+      });
+    },
+    read(consultId) {
+      return callApi(`/listar/atencion/${consultId}`);
+    },
+    update(consultId, updates) {
+      return callApi(`/actualizar/atencion`, {
+        method: 'PUT',
+        body: JSON.stringify(updates),
+      });
+    }
   },
   usuarios: {
     list() {
