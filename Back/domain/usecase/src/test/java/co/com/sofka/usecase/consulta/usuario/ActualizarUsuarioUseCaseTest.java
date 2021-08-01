@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(classes = ActualizarUsuarioUseCase.class)
 class ActualizarUsuarioUseCaseTest {
     @MockBean
@@ -43,8 +42,8 @@ class ActualizarUsuarioUseCaseTest {
     }
 
     @Test
-    @DisplayName("Sab test actualizar usuario")
-    public void actualizarUsuarioSabTest(){
+    @DisplayName("Sad test actualizar usuario")
+    public void actualizarUsuarioSadTest(){
         Usuario usuario = new Usuario("xxxx",
                 new Identificacion(178823411L),
                 new Nombre("juan"),
