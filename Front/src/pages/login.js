@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 
 import './styles/Home.css';
 import Meoth from '../images/meoth.svg';
-import Gigli from '../images/gigli.svg';
 import pok from '../images/vulpix.png';
+import { signInWithGoogle} from '../Auth';
 
 export default class Home extends Component {
   
   render() {
 
     const login = () => {
+      signInWithGoogle().then(r => {
         this.props.history.push(`/consults/usernew`)
-    }
-
-    const loginDoctor = () => {
-        this.props.history.push(`/atencion/doctornew`)
+    }).catch(error => {
+        console.log(error)
+    })
     }
 
     return ( 
@@ -42,18 +42,7 @@ export default class Home extends Component {
               />
             </div>
 
-            <div className="Home__col col-12 col-md-4">
-              <img
-                src={Gigli}
-                alt="Platzi Conf Logo"
-                className="img-fluid mb-2"
-              />
-
-              <h1>Doctor Pokemon</h1>
-              <button className="btn btn-primary" onClick={loginDoctor}>
-                Start
-              </button>
-            </div>
+            
 
 
           </div>

@@ -14,6 +14,7 @@ import ConsultDetails from '../pages/ConsultDetailsContainer';
 import UserEdit from '../pages/UserEdit';
 import PokemonEdit from '../pages/PokemonEdit';
 import ConsultEdit from '../pages/ConsultEdit';
+import Login from '../pages/login'
 import NotFound from '../pages/NotFound';
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
@@ -33,7 +34,7 @@ function PublicRoute({ component: Component, authenticated, ...rest }) {
       {...rest}
       render={(props) => authenticated === false
         ? <Component {...props} />
-        : <Redirect to='/consults/usernew' />}
+        : <Redirect to='/home' />}
     />
   )
 }
@@ -69,7 +70,8 @@ class App extends Component {
     <BrowserRouter>
       <Layout>
         <Switch>
-        <PublicRoute exact path="/" authenticated = {this.state.authenticated} component={Home} />
+        <PublicRoute exact path="/" authenticated = {this.state.authenticated} component={Login} />
+        <PrivateRoute exact path="/home" authenticated = {this.state.authenticated} component={Home} />
         <PrivateRoute exact path = "/consults" authenticated = {this.state.authenticated} component = {Consults} />
         <PrivateRoute exact path = "/consults/usernew" authenticated = {this.state.authenticated} component = {UserNew} />
         <PrivateRoute exact path = "/consults/pokemonnew" authenticated = {this.state.authenticated} component = {PokemonNew} />
