@@ -4,6 +4,7 @@ import co.com.sofka.model.consulta.entity.usuario.Usuario;
 import co.com.sofka.model.consulta.entity.usuario.gateways.UsuarioRepository;
 import co.com.sofka.model.consulta.values.valueobjectuser.*;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,6 +20,7 @@ class CreateUsuarioUseCaseTest {
     private CreateUsuarioUseCase createUsuarioUseCase;
 
     @Test
+    @DisplayName("Test crear usuario")
     public void testsCrearUsuario(){
 
         Usuario usuario = new Usuario("xxxx",

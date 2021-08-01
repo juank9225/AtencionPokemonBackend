@@ -3,6 +3,7 @@ package co.com.sofka.usecase.consulta.mascota;
 import co.com.sofka.model.consulta.entity.mascotapokemon.MascotaPokemon;
 import co.com.sofka.model.consulta.entity.mascotapokemon.gateways.MascotaPokemonRepository;
 import co.com.sofka.model.consulta.values.valueobjectmascota.*;
+import org.assertj.core.internal.bytebuddy.implementation.bytecode.Throw;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,8 +23,8 @@ class ListarMascotaIdUseCaseTest {
     private ListarMascotaIdUseCase listarMascotaIdUseCase;
 
     @Test
-    @DisplayName("Test obtener Pokemon por Id")
-    public void obtenerPokemonPorIdTest(){
+    @DisplayName("Happy test obtener Pokemon por Id")
+    public void obtenerPokemonPorIdHappyTest(){
         MascotaPokemon pokemon = new MascotaPokemon("xxxx",
                 new IdentificacionMascota(1786411L),
                 new NombrePokemon("Kali"),
@@ -39,4 +40,5 @@ class ListarMascotaIdUseCaseTest {
     Assertions.assertEquals(resp.getRaza().getValor(),"Sandshrew");
     Assertions.assertEquals(resp.getTipo().getValor(),"Tierra");
     }
+
 }
