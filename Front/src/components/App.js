@@ -5,7 +5,9 @@ import { auth } from '../firebase';
 import Layout from './Layout';
 import Home from '../pages/Home';
 import Consults from '../pages/Consults';
+import Atenciones from '../pages/Atenciones';
 import UserNew from '../pages/UserNew';
+import DoctorNew from '../pages/DoctorNew';
 import PokemonNew from '../pages/PokemonNew.js';
 import ConsultNew from '../pages/ConsultNew.js';
 import ConsultDetails from '../pages/ConsultDetailsContainer';
@@ -76,7 +78,8 @@ class App extends Component {
         <PrivateRoute exact path = "/consults/:userId/edituser/:consultId" authenticated = {this.state.authenticated} component = {UserEdit} />
         <PrivateRoute exact path = "/consults/:pokemonId/editpokemon/:consultId" authenticated = {this.state.authenticated} component = {PokemonEdit} />
         <PrivateRoute exact path = "/consults/:consultId/editconsult" authenticated = {this.state.authenticated} component = {ConsultEdit} />
-        <PrivateRoute exact path = "/atencion/:atencionId" authenticated = {this.state.authenticated} component = {ConsultDetails} />
+        <PrivateRoute exact path = "/atencion/doctornew" authenticated = {this.state.authenticated} component = {DoctorNew} />
+        <PrivateRoute exact path = "/atenciones" authenticated = {this.state.authenticated} component = {Atenciones} />
         <Route component={NotFound} />
         </Switch>
       </Layout>

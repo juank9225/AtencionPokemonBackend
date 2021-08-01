@@ -74,10 +74,11 @@ function ConsultsList(props) {
   const { query, setQuery, filteredBadges } = useSearchBadges(consults);
 
   if (filteredBadges.length === 0) {
+    console.log(filteredBadges)
     return (
       <div>
         <div className="form-group">
-          <label>Filter Consults</label>
+          <label>Filter Atenciones</label>
           <input
             type="text"
             className="form-control"

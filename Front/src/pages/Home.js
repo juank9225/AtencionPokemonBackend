@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import './styles/Home.css';
 import Meoth from '../images/meoth.svg';
 import Gigli from '../images/gigli.svg';
 import pok from '../images/vulpix.png';
 import { signInWithGoogle} from '../Auth';
-import { auth } from '../firebase';
 
 export default class Home extends Component {
   
@@ -15,6 +13,14 @@ export default class Home extends Component {
     const login = () => {
       signInWithGoogle().then(r => {
         this.props.history.push(`/consults/usernew`)
+    }).catch(error => {
+        console.log(error)
+    })
+    }
+
+    const loginDoctor = () => {
+      signInWithGoogle().then(r => {
+        this.props.history.push(`/atencion/doctornew`)
     }).catch(error => {
         console.log(error)
     })
@@ -53,9 +59,9 @@ export default class Home extends Component {
               />
 
               <h1>Doctor Pokemon</h1>
-              <Link className="btn btn-primary" to="/badges">
+              <button className="btn btn-primary" onClick={loginDoctor}>
                 Start
-              </Link>
+              </button>
             </div>
 
 
