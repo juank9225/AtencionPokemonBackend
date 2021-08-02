@@ -30,8 +30,7 @@ const api = {
     },
     listByIDUser(idUser) {
       return callApi(`/listar/consulta/usuario/${idUser}`);
-    }
-    ,
+    },
     create(consult) {
       // throw new Error('500: Server error');
       return callApi(`/crear/consulta`, {
@@ -82,6 +81,9 @@ const api = {
   usuarios: {
     list() {
       return callApi('/listar/usuarios');
+    },
+    validar(email){
+      return callApi(`/validar/usuario/${email}`)
     },
     create(consult) {
       // throw new Error('500: Server error');

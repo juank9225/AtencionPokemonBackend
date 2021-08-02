@@ -16,6 +16,7 @@ import PokemonEdit from '../pages/PokemonEdit';
 import ConsultEdit from '../pages/ConsultEdit';
 import Login from '../pages/login'
 import NotFound from '../pages/NotFound';
+import Loader from './MiniLoader'
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
   return (
@@ -66,7 +67,7 @@ class App extends Component {
   }
 
   render (){
-    return this.state.loading === true ? <h2>Loading...</h2> : (
+    return this.state.loading === true ? <Loader></Loader> : (
     <BrowserRouter>
       <Layout>
         <Switch>

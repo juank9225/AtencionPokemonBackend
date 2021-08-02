@@ -100,7 +100,7 @@ function ConsultsList(props) {
   return (
     <div className="BadgesList">
       <div className="form-group">
-        <label>Filter Consults</label>
+        <label>Filtrar Atenciones</label>
         <input
           type="text"
           className="form-control"

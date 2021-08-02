@@ -4,13 +4,26 @@ import './styles/Home.css';
 import Meoth from '../images/meoth.svg';
 import Gigli from '../images/gigli.svg';
 import pok from '../images/vulpix.png';
+import api from '../api';
+import { auth } from '../firebase';
 
 export default class Home extends Component {
   
   render() {
 
-    const login = () => {
+    const login = async e => {
+      e.preventDefault();
+
+      try {
+       const validar = await api.usuarios.validar(auth().currentUser.email)
+      
+        if(validar.resgistrado === true){
+          return this.props.history.push(`/consults`) 
+        }
         this.props.history.push(`/consults/usernew`)
+      } catch (error) {
+        
+      }
     }
 
     const loginDoctor = () => {
