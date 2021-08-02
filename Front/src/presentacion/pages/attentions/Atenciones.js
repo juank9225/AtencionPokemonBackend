@@ -85,13 +85,12 @@ class Consults extends React.Component {
         return data.filter(filterByIDCons)
       })
 
-      console.log(datamorfis2)
-      console.log("datamorfis2")
+      //console.log(datamorfis2)
+      //console.log("datamorfis2")
 
       const datamorfis3 = datamorfis2.map((consult) => {
         function filterByID(value, index, array) {
           consultaidU = consult[0].idUsuario
-          console.log(consultaidU)
           userid = value.id 
           return userid === consultaidU;
         }
@@ -114,10 +113,29 @@ class Consults extends React.Component {
         return [consult[0] , userID[0] , pokemonID[0], atencionID[0]]
       })
 
-      console.log("datamorfis3")
-      console.log(datamorfis3)
+      //console.log("datamorfis")
+      //console.log(datamorfis)
 
-      this.setState({ loading: false, data: data, consulta:datamorfis, consulta2:datamorfis3 });
+      var dataa = datamorfis.map(()=>{
+        function filterU(value, index, array) {
+          return value[3] !== undefined;
+        }
+        return datamorfis.filter(filterU)
+
+      });
+
+      //console.log(dataa)
+
+      var dataaa = datamorfis3.map(()=>{
+        function filterU(value, index, array) {
+          return value[3] !== undefined;
+        }
+        return datamorfis3.filter(filterU)
+
+      });
+      //console.log(datamorfis)
+      //console.log(datamorfis.atencionID)
+      this.setState({ loading: false, data: data, consulta:dataa[0], consulta2:dataaa[0] });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }

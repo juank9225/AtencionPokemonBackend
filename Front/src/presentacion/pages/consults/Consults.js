@@ -16,7 +16,8 @@ class Consults extends React.Component {
     loading: true,
     error: null,
     data: undefined,
-    consulta : undefined
+    consulta : undefined,
+    dataa: undefined,
   };
 
   componentDidMount() {
@@ -54,7 +55,7 @@ class Consults extends React.Component {
 
       //console.log(user)
 
-      const datamorfis = data.map((consult) => {
+      var datamorfis = data.map((consult) => {
         function filterByID(value, index, array) {
           consultaidU = consult.idUsuario
           userid = value.id 
@@ -80,7 +81,16 @@ class Consults extends React.Component {
         return [consult , userID[0] , pokemonID[0], atencionID[0]]
       })
 
-      this.setState({ loading: false, data: data, consulta:datamorfis });
+      var dataa = datamorfis.map(()=>{
+        function filterU(value, index, array) {
+          return value[3] !== undefined;
+        }
+        return datamorfis.filter(filterU)
+
+      });
+      //console.log(datamorfis)
+
+      this.setState({ loading: false, data: data, consulta:datamorfis, dataa:dataa[0] });
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -129,7 +139,7 @@ class Consults extends React.Component {
             <ConsultList consults = {this.state.consulta} />
             </div>
             <div className="col-6">
-            <AtendList consults = {this.state.consulta} />
+            <AtendList consults = {this.state.dataa} />
             </div>
           </div>
           </div>

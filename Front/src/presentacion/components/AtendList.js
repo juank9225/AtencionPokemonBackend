@@ -6,7 +6,6 @@ import Gravatar from './Gravatar';
 
 class ConsultListItem extends React.Component {
   render() {
-    console.log(this.props)
     return (
       <div className="BadgesListItem">
         <Gravatar
@@ -73,30 +72,6 @@ function useSearchBadges(consults) {
 function ConsultsList(props) {
   const consults = props.consults;
   const { query, setQuery, filteredBadges } = useSearchBadges(consults);
-
-  if (filteredBadges.length === 0) {
-    console.log(filteredBadges)
-    return (
-      <div>
-        <div className="form-group">
-          <label>Filter Atenciones</label>
-          <input
-            type="text"
-            className="form-control"
-            value={query}
-            onChange={e => {
-              setQuery(e.target.value);
-            }}
-          />
-        </div>
-
-        <h3>No consults were found</h3>
-        <Link className="btn btn-primary" to="/consult/new">
-          Create new consult
-        </Link>
-      </div>
-    );
-  }
 
   return (
     <div className="BadgesList">

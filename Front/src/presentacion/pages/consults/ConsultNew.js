@@ -37,7 +37,7 @@ class ConsultNew extends React.Component {
 
     try {
 
-      const response = await api.consults.create(this.state.form);
+      const response =await api.consults.create(this.state.form);
       console.log(response.fechaConsulta.valor)
       const predeterminada = {
         idConsulta: response.id,
