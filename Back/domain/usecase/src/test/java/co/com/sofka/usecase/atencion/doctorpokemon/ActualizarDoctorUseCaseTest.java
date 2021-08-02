@@ -58,7 +58,5 @@ class ActualizarDoctorUseCaseTest {
         Assertions.assertThrows(NullPointerException.class, () -> {
             actualizarDoctorUseCase.actualizarDoctor(doctorpokemon);
         });
-
-
     }
 }
