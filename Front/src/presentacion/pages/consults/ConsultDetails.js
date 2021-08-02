@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './styles/ConsultDetails.css';
-import confLogo from '../images/descarga.png';
-import Consult from '../components/Consult';
+import '../styles/ConsultDetails.css';
+import confLogo from '../../images/descarga.png';
+import Consult from '../../components/Consult';
 //import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
 function ConsultDetails(props) {

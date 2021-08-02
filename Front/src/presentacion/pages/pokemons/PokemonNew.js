@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './styles/ConsultNew.css';
-import header from '../images/vulpix.png';
-import Pokemon from '../components/Pokemon';
-import PokemonForm from '../components/PokemonForm';
-import PageLoading from '../components/PageLoading';
-import api from '../../infraestructura/api';
+import '../styles/ConsultNew.css';
+import header from '../../images/vulpix.png';
+import Pokemon from '../../components/Pokemon';
+import PokemonForm from '../../components/PokemonForm';
+import PageLoading from '../../components/PageLoading';
+import api from '../../../infraestructura/api';
 
 class PokemonNew extends React.Component {
   state = {

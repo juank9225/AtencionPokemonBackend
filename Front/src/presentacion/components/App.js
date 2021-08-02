@@ -4,16 +4,16 @@ import { auth } from '../../infraestructura/firebase/firebase';
 
 import Layout from './Layout';
 import Home from '../pages/Home';
-import Consults from '../pages/Consults';
-import Atenciones from '../pages/Atenciones';
-import UserNew from '../pages/UserNew';
-import DoctorNew from '../pages/DoctorNew';
-import PokemonNew from '../pages/PokemonNew.js';
-import ConsultNew from '../pages/ConsultNew.js';
-import ConsultDetails from '../pages/ConsultDetailsContainer';
-import UserEdit from '../pages/UserEdit';
-import PokemonEdit from '../pages/PokemonEdit';
-import ConsultEdit from '../pages/ConsultEdit';
+import Consults from '../pages/consults/Consults';
+import Atenciones from '../pages/attentions/Atenciones';
+import UserNew from '../pages/users/UserNew';
+import DoctorNew from '../pages/doctors/DoctorNew';
+import PokemonNew from '../pages/pokemons/PokemonNew';
+import ConsultNew from '../pages/consults/ConsultNew';
+import ConsultDetails from '../pages/consults/ConsultDetailsContainer';
+import UserEdit from '../pages/users/UserEdit';
+import PokemonEdit from '../pages/pokemons/PokemonEdit';
+import ConsultEdit from '../pages/consults/ConsultEdit';
 import Login from '../pages/login'
 import NotFound from '../pages/NotFound';
 import Loader from './MiniLoader'

@@ -1,24 +1,22 @@
 import React from 'react';
 
-import './styles/UserEdit.css';
-import header from '../images/vulpix.png';
-import Consult from '../components/Consulta';
-import ConsultForm from '../components/ConsultForm';
-import PageLoading from '../components/PageLoading';
-import api from '../../infraestructura/api';
+import '../styles/UserEdit.css';
+import header from '../../images/vulpix.png';
+import Pokemon from '../../components/Pokemon';
+import PokemonForm from '../../components/PokemonForm';
+import PageLoading from '../../components/PageLoading';
+import api from '../../../infraestructura/api';
 
-class ConsultEdit extends React.Component {
+class PokemonEdit extends React.Component {
   state = {
     loading: true,
     error: null,
     form: {
-      id:this.props.match.params.consultId,
-      fechaConsulta: '',
-      causaEnfermedad: '',
-      sintomas: '',
-      estadoRevision: false,
-      idUsuario: this.props.match.params.userId,
-      idMascotaPokemon: this.props.match.params.pokemonId
+      id:this.props.match.params.pokemonId,
+      nombre: '',
+      raza: '',
+      tipo: '',
+      habilidad: '',
     },
   };
 
@@ -29,7 +27,7 @@ class ConsultEdit extends React.Component {
   fetchData = async e => {
     this.setState({ loading: true, error: null });
     try {
-      const data = await api.consults.read(this.props.match.params.consultId);
+      const data = await api.pokemon.read(this.props.match.params.pokemonId);
       this.setState({ loading: false, form: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -50,22 +48,19 @@ class ConsultEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-
       const data = this.state.form
 
       const datamorfis = {
-        morfis:{
-          id:this.props.match.params.consultId,
-          fechaConsulta: data.fechaConsulta.valor || data.fechaConsulta,
-          causaEnfermedad: data.causaEnfermedad.valor || data.causaEnfermedad,
-          sintomas: data.sintomas.valor || data.sintomas,
-          estadoRevision: false,
-          idUsuario: data.idUsuario,
-          idMascotaPokemon: data.idMascotaPokemon
-        }
+        morfis: {
+          id: this.props.match.params.pokemonId,
+          nombre: data.nombre.valor || data.nombre,
+          raza: data.raza.valor || data.raza,
+          tipo: data.tipo.valor || data.tipo,
+          habilidad: data.habilidad.valor || data.habilidad,
+          },
+      }; 
 
-      } 
-      await api.consults.update(this.props.match.params.consultId, datamorfis.morfis);
+      await api.pokemon.update(this.props.match.params.pokemonId, datamorfis.morfis);
       this.setState({ loading: false });
 
       this.props.history.push(`/consults/${this.props.match.params.consultId}`);
@@ -92,16 +87,17 @@ class ConsultEdit extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <Consult
-                fechaConsulta={ this.state.form.fechaConsulta.valor ||this.state.form.fechaConsulta || 'NAME'}
-                causaEnfermedad={this.state.form.causaEnfermedad.valor ||this.state.form.causaEnfermedad ||'LAST_NAME'}
-                sintomas={this.state.form.sintomas.valor ||this.state.form.sintomas || 'twitter'}
-              />
+              <Pokemon
+                raza={this.state.form.raza.valor || this.state.form.raza ||'RAZA'}
+                nombre={this.state.form.nombre.valor || this.state.form.nombre || 'NOMBRE'}
+                tipo={this.state.form.tipo.valor || this.state.form.tipo || 'TIPO'}
+                habilidad={this.state.form.habilidad.valor || this.state.form.habilidad || 'HABILIDAD'}
+               />
             </div>
 
             <div className="col-6">
-              <h1>Editar Consulta</h1>
-              <ConsultForm
+              <h1>Editar Usuario</h1>
+              <PokemonForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
@@ -115,4 +111,4 @@ class ConsultEdit extends React.Component {
   }
 }
 
-export default ConsultEdit;
+export default PokemonEdit;

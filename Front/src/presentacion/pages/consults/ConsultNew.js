@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './styles/ConsultNew.css';
-import header from '../images/vulpix.png';
-import Consulta from '../components/Consulta';
-import ConsultForm from '../components/ConsultForm';
-import PageLoading from '../components/PageLoading';
-import api from '../../infraestructura/api';
-import { auth } from '../../infraestructura/firebase/firebase';
+import '../styles/ConsultNew.css';
+import header from '../../images/vulpix.png';
+import Consulta from '../../components/Consulta';
+import ConsultForm from '../../components/ConsultForm';
+import PageLoading from '../../components/PageLoading';
+import api from '../../../infraestructura/api';
+import { auth } from '../../../infraestructura/firebase/firebase';
 
 class ConsultNew extends React.Component {
   state = {
@@ -41,7 +41,7 @@ class ConsultNew extends React.Component {
       console.log(response.fechaConsulta.valor)
       const predeterminada = {
         idConsulta: response.id,
-        idDoctor: "61060fc1ef19566bacf38909",
+        idDoctor: "A6KOYXyC0GXElnH5DZ05EkmDZi22",
         diagnostico: "no atendida aun",
         fechaAtencion: response.fechaConsulta.valor
       }
