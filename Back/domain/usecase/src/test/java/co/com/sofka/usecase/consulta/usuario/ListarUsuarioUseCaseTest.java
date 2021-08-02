@@ -49,7 +49,9 @@ class ListarUsuarioUseCaseTest {
         usuarios.add(usuario2);
 
         Mockito.when(usuarioRepository.listarUsuarios()).thenReturn(usuarios);
+
         List<Usuario> resp = listarUsuarioUseCase.listarUsuarios();
+
         Assertions.assertEquals(resp.size(), 2);
         Assertions.assertEquals(resp.get(0).getId(), "123456");
         Assertions.assertEquals(resp.get(1).getId(), "123445623456");
