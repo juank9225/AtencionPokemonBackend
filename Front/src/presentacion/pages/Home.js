@@ -18,16 +18,27 @@ export default class Home extends Component {
        const validar = await api.usuarios.validar(auth().currentUser.email)
       
         if(validar.resgistrado === true){
+          return this.props.history.push(`/atenciones`) 
+        }
+        this.props.history.push(`/atencion/doctornew`)
+      } catch (error) {
+        
+      }
+    }
+
+    const loginDoctor = async e => {
+      e.preventDefault();
+
+      try {
+       const validar = await api.doctor.validar(auth().currentUser.email)
+      
+        if(validar.resgistrado === true){
           return this.props.history.push(`/consults`) 
         }
         this.props.history.push(`/consults/usernew`)
       } catch (error) {
         
       }
-    }
-
-    const loginDoctor = () => {
-        this.props.history.push(`/atencion/doctornew`)
     }
 
     return ( 

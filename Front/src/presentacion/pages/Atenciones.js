@@ -50,8 +50,6 @@ class Consults extends React.Component {
       var consultaidP
       var pokemonid
 
-      //console.log(user)
-
       const datamorfis = data.map((consult) => {
         function filterByID(value, index, array) {
           consultaidU = consult.idUsuario
@@ -82,14 +80,18 @@ class Consults extends React.Component {
         function filterByIDCons(value, index, array) {
           consultaid = aten.idConsulta
           userid = value.id
-          return userid === consultaidU;
+          return aten.idConsulta === value.id;
         }
         return data.filter(filterByIDCons)
       })
 
+      console.log(datamorfis2)
+      console.log("datamorfis2")
+
       const datamorfis3 = datamorfis2.map((consult) => {
         function filterByID(value, index, array) {
           consultaidU = consult[0].idUsuario
+          console.log(consultaidU)
           userid = value.id 
           return userid === consultaidU;
         }
@@ -109,9 +111,9 @@ class Consults extends React.Component {
         userID = user.filter(filterByID)
         pokemonID = poke.filter(filterByIDP)
         atencionID = atend.filter(filterAtByIDC)
-
         return [consult[0] , userID[0] , pokemonID[0], atencionID[0]]
       })
+
       this.setState({ loading: false, data: data, consulta:datamorfis, consulta2:datamorfis3 });
     } catch (error) {
       this.setState({ loading: false, error: error });

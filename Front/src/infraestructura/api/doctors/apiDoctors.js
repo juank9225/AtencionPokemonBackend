@@ -4,6 +4,9 @@ const doctor = {
   list() {
     return callApi('/listar/doctores');
   },
+  validar(email){
+    return callApi(`/validar/doctor/${email}`)
+  },
   create(consult) {
     // throw new Error('500: Server error');
     return callApi(`/crear/doctor`, {

@@ -6,6 +6,7 @@ import Gravatar from './Gravatar';
 
 class ConsultListItem extends React.Component {
   render() {
+    console.log(this.props)
     return (
       <div className="BadgesListItem">
         <Gravatar
