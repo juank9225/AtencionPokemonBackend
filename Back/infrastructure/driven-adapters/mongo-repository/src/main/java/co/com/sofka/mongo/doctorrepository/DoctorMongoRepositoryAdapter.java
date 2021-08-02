@@ -41,4 +41,9 @@ implements DoctorpokemonRepository
     public Doctorpokemon actualizarDoctor(Doctorpokemon doctorpokemon) {
         return this.repository.save(doctorpokemon);
     }
+
+    @Override
+    public Doctorpokemon validarDoctor(String correo) {
+        return this.repository.findByCorreoValor(correo);
+    }
 }

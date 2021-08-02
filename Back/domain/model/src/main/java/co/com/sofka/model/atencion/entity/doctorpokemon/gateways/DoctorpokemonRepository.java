@@ -9,5 +9,5 @@ public interface DoctorpokemonRepository {
     List<Doctorpokemon> listarDoctores();
     Doctorpokemon obtenerDoctor(String id);
     Doctorpokemon actualizarDoctor(Doctorpokemon doctorpokemon);
-
+    Doctorpokemon validarDoctor(String correo);
 }
