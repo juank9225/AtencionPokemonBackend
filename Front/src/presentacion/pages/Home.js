@@ -11,7 +11,7 @@ export default class Home extends Component {
   
   render() {
 
-    const login = async e => {
+    const loginDoctor = async e => {
       e.preventDefault();
 
       try {
@@ -26,7 +26,7 @@ export default class Home extends Component {
       }
     }
 
-    const loginDoctor = async e => {
+    const login = async e => {
       e.preventDefault();
 
       try {
@@ -54,7 +54,7 @@ export default class Home extends Component {
 
               <h1>Usuario Pokemon</h1>
               <button className="btn btn-primary" onClick={login}>
-                Start
+                Iniciar
               </button>
             </div>
 
@@ -75,7 +75,7 @@ export default class Home extends Component {
 
               <h1>Doctor Pokemon</h1>
               <button className="btn btn-primary" onClick={loginDoctor}>
-                Start
+                Iniciar
               </button>
             </div>
 

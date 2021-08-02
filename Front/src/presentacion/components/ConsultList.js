@@ -71,7 +71,7 @@ function ConsultsList(props) {
     return (
       <div>
         <div className="form-group">
-          <label>Filter Consults</label>
+          <label>Filtrar Consultas</label>
           <input
             type="text"
             className="form-control"
@@ -84,7 +84,7 @@ function ConsultsList(props) {
 
         <h3>No consults were found</h3>
         <Link className="btn btn-primary" to="/consult/new">
-          Create new consult
+          Crear Nueva Consulta
         </Link>
       </div>
     );
@@ -93,7 +93,7 @@ function ConsultsList(props) {
   return (
     <div className="BadgesList">
       <div className="form-group">
-        <label>Filter Consults</label>
+        <label>Filtrar Consulta</label>
         <input
           type="text"
           className="form-control"

@@ -18,6 +18,7 @@ class UserForm extends React.Component {
               type="text"
               name="nombre"
               value={this.props.formValues.nombre.valor}
+              required
             />
           </div>
 
@@ -29,6 +30,7 @@ class UserForm extends React.Component {
               type="text"
               name="apellido"
               value={this.props.formValues.apellido.valor}
+              required
             />
           </div>
 
@@ -40,6 +42,7 @@ class UserForm extends React.Component {
               type="email"
               name="correo"
               value={this.props.formValues.correo.valor}
+              required
             />
           </div>
 
@@ -51,6 +54,7 @@ class UserForm extends React.Component {
               type="text"
               name="profesion"
               value={this.props.formValues.profesion.valor}
+              required
             />
           </div>
 
@@ -62,6 +66,7 @@ class UserForm extends React.Component {
               type="text"
               name="telefono"
               value={this.props.formValues.telefono.valor}
+              required
             />
           </div>
 

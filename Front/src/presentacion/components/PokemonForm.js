@@ -17,6 +17,7 @@ class PokemonForm extends React.Component {
               type="text"
               name="raza"
               value={this.props.formValues.raza.valor}
+              required
             />
           </div>
 
@@ -28,6 +29,7 @@ class PokemonForm extends React.Component {
               type="text"
               name="nombre"
               value={this.props.formValues.nombre.valor}
+              required
             />
           </div>
         
@@ -39,6 +41,7 @@ class PokemonForm extends React.Component {
               type="text"
               name="tipo"
               value={this.props.formValues.tipo.valor}
+              required
             />
           </div>
 
@@ -50,6 +53,7 @@ class PokemonForm extends React.Component {
               type="text"
               name="habilidad"
               value={this.props.formValues.habilidad.valor}
+              required
             />
           </div>
 

@@ -151,7 +151,7 @@ class Consults extends React.Component {
         <div className="container">
           <div className="Badges__buttons">
           <Link className="btn btn-warning"  onClick={log} >
-            Logout
+            Cerrar Sesion
           </Link>
           </div>
           <div className="container">

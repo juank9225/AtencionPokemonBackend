@@ -17,6 +17,7 @@ class BadgeForm extends React.Component {
               type="text"
               name="nombre"
               value={this.props.formValues.nombre.valor || this.props.formValues.nombre}
+              required
             />
           </div>
 
@@ -28,6 +29,7 @@ class BadgeForm extends React.Component {
               type="text"
               name="apellido"
               value={this.props.formValues.apellido.valor}
+              required
             />
           </div>
 
@@ -39,6 +41,7 @@ class BadgeForm extends React.Component {
               type="email"
               name="correo"
               value={this.props.formValues.correo.valor || this.props.formValues.correo}
+              required
             />
           </div>
 
@@ -50,6 +53,7 @@ class BadgeForm extends React.Component {
               type="text"
               name="especialidad"
               value={this.props.formValues.especialidad.valor}
+              required
             />
           </div>
 
@@ -61,6 +65,7 @@ class BadgeForm extends React.Component {
               type="text"
               name="telefono"
               value={this.props.formValues.telefono.valor}
+              required
             />
           </div>
 

@@ -117,10 +117,10 @@ class Consults extends React.Component {
         <div className="container">
           <div className="Badges__buttons">
           <Link className="btn btn-warning"  onClick={log} >
-            Logout
+            Cerrar Sesion
           </Link>
             <Link to={`/consults/pokemonnew`} className="btn btn-primary">
-              New Consult
+              Nueva Consulta
             </Link>
           </div>
           <div className="container">

@@ -43,7 +43,7 @@ function ConsultDetails(props) {
             />
           </div>
           <div className="col">
-            <h2>Actions</h2>
+            <h2 className="h2">Acciones</h2>
             <div>
               <div>
                 <Link

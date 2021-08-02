@@ -14,9 +14,10 @@ class ConsultForm extends React.Component {
             <input
               onChange={this.props.onChange}
               className="form-control"
-              type="text"
+              type="date"
               name="fechaConsulta"
               value={this.props.formValues.fechaConsulta.valor}
+              required
             />
           </div>
 
@@ -28,6 +29,7 @@ class ConsultForm extends React.Component {
               type="text"
               name="sintomas"
               value={this.props.formValues.sintomas.valor}
+              required
             />
           </div>
         
@@ -39,6 +41,7 @@ class ConsultForm extends React.Component {
               type="text"
               name="causaEnfermedad"
               value={this.props.formValues.causaEnfermedad.valor}
+              required
             />
           </div>
 

@@ -26,7 +26,7 @@ export default class Home extends Component {
               Consultas Pokemon
               </h1>
               <button className="btn btn-primary" onClick={login}>
-                Start
+                Iniciar Sesion
               </button>
             </div>
 

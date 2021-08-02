@@ -22,3 +22,12 @@
   justify-content: flex-end;
   margin-bottom: 1rem;
 }
+
+.h2{
+  margin-left: 25%;
+}
+
+.btn {
+  margin-left: 25%;
+  width: 50%;
+}
