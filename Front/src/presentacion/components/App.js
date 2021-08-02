@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import { auth } from '../firebase';
+import { auth } from '../../infraestructura/firebase/firebase';
 
 import Layout from './Layout';
 import Home from '../pages/Home';

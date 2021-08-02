@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './styles/Home.css';
 import pok from '../images/Pokemons.png';
-import { signInWithGoogle} from '../Auth';
+import { signInWithGoogle} from '../../infraestructura/firebase/Auth';
 
 export default class Home extends Component {
   

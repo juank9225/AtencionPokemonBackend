@@ -5,8 +5,8 @@ import header from '../images/vulpix.png';
 import User from '../components/User';
 import UserFormEdit from '../components/UserFormEdit';
 import PageLoading from '../components/PageLoading';
-import api from '../api';
-import { auth } from '../firebase';
+import api from '../../infraestructura/api';
+import { auth } from '../../infraestructura/firebase/firebase';
 
 class BadgeEdit extends React.Component {
   state = {

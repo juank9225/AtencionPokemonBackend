@@ -3,7 +3,7 @@ import React from 'react';
 import BadgeDetails from './ConsultDetails';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
-import api from '../api';
+import api from '../../infraestructura/api';
 
 class BadgeDetailsContainer extends React.Component {
   state = {

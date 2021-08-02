@@ -5,8 +5,8 @@ import header from '../images/vulpix.png';
 import Consulta from '../components/Consulta';
 import ConsultForm from '../components/ConsultForm';
 import PageLoading from '../components/PageLoading';
-import api from '../api';
-import { auth } from '../firebase';
+import api from '../../infraestructura/api';
+import { auth } from '../../infraestructura/firebase/firebase';
 
 class ConsultNew extends React.Component {
   state = {

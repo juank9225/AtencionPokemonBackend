@@ -4,8 +4,8 @@ import './styles/Home.css';
 import Meoth from '../images/meoth.svg';
 import Gigli from '../images/gigli.svg';
 import pok from '../images/vulpix.png';
-import api from '../api';
-import { auth } from '../firebase';
+import api from '../../infraestructura/api';
+import { auth } from '../../infraestructura/firebase/firebase';
 
 export default class Home extends Component {
   

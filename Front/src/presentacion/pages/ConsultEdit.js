@@ -2,22 +2,23 @@ import React from 'react';
 
 import './styles/UserEdit.css';
 import header from '../images/vulpix.png';
-import User from '../components/User';
-import UserFormEdit from '../components/UserFormEdit';
+import Consult from '../components/Consulta';
+import ConsultForm from '../components/ConsultForm';
 import PageLoading from '../components/PageLoading';
-import api from '../api';
+import api from '../../infraestructura/api';
 
-class BadgeEdit extends React.Component {
+class ConsultEdit extends React.Component {
   state = {
     loading: true,
     error: null,
     form: {
-      id:this.props.match.params.userId,
-      nombre: '',
-      apellido: '',
-      correo: '',
-      profesion: '',
-      telefono: '',
+      id:this.props.match.params.consultId,
+      fechaConsulta: '',
+      causaEnfermedad: '',
+      sintomas: '',
+      estadoRevision: false,
+      idUsuario: this.props.match.params.userId,
+      idMascotaPokemon: this.props.match.params.pokemonId
     },
   };
 
@@ -28,7 +29,7 @@ class BadgeEdit extends React.Component {
   fetchData = async e => {
     this.setState({ loading: true, error: null });
     try {
-      const data = await api.usuarios.read(this.props.match.params.userId);
+      const data = await api.consults.read(this.props.match.params.consultId);
       this.setState({ loading: false, form: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -49,20 +50,22 @@ class BadgeEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
+
       const data = this.state.form
 
       const datamorfis = {
         morfis:{
-          id:this.props.match.params.userId,
-          nombre: data.nombre.valor || data.nombre,
-          apellido: data.apellido.valor || data.apellido,
-          correo: data.correo.valor || data.correo,
-          profesion: data.profesion.valor || data.profesion,
-          telefono: data.telefono.valor || data.telefono
+          id:this.props.match.params.consultId,
+          fechaConsulta: data.fechaConsulta.valor || data.fechaConsulta,
+          causaEnfermedad: data.causaEnfermedad.valor || data.causaEnfermedad,
+          sintomas: data.sintomas.valor || data.sintomas,
+          estadoRevision: false,
+          idUsuario: data.idUsuario,
+          idMascotaPokemon: data.idMascotaPokemon
         }
-      } 
 
-      await api.usuarios.update(this.props.match.params.userId, datamorfis.morfis);
+      } 
+      await api.consults.update(this.props.match.params.consultId, datamorfis.morfis);
       this.setState({ loading: false });
 
       this.props.history.push(`/consults/${this.props.match.params.consultId}`);
@@ -89,19 +92,16 @@ class BadgeEdit extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              <User
-                nombre={this.state.form.nombre.valor || this.state.form.nombre || 'NAME'}
-                apellido={this.state.form.apellido.valor || this.state.form.apellido ||'LAST_NAME'}
-                telefono={this.state.form.telefono.valor || this.state.form.telefono || 'twitter'}
-                profesion={this.state.form.profesion.valor || this.state.form.profesion || 'JOB_TITLE'}
-                correo={this.state.form.correo.valor || this.state.form.correo || 'EMAIL'}
-                avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
+              <Consult
+                fechaConsulta={ this.state.form.fechaConsulta.valor ||this.state.form.fechaConsulta || 'NAME'}
+                causaEnfermedad={this.state.form.causaEnfermedad.valor ||this.state.form.causaEnfermedad ||'LAST_NAME'}
+                sintomas={this.state.form.sintomas.valor ||this.state.form.sintomas || 'twitter'}
               />
             </div>
 
             <div className="col-6">
-              <h1>Editar Usuario</h1>
-              <UserFormEdit
+              <h1>Editar Consulta</h1>
+              <ConsultForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValues={this.state.form}
@@ -115,4 +115,4 @@ class BadgeEdit extends React.Component {
   }
 }
 
-export default BadgeEdit;
+export default ConsultEdit;

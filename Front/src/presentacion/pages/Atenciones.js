@@ -7,8 +7,8 @@ import AtendList from '../components/AtendList';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 import MiniLoader from '../components/MiniLoader';
-import api from '../api';
-import { auth } from '../firebase';
+import api from '../../infraestructura/api';
+import { auth } from '../../infraestructura/firebase/firebase';
 
 class Consults extends React.Component {
   state = {
