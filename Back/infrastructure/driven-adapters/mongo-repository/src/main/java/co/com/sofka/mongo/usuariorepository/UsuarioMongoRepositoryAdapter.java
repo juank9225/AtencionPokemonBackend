@@ -41,4 +41,9 @@ implements UsuarioRepository
     public Usuario actualizarUsuario(Usuario usuario) {
         return this.repository.save(usuario);
     }
+
+    @Override
+    public Usuario validarUsuario(String correo) {
+        return this.repository.findByCorreoValor(correo);
+    }
 }

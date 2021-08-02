@@ -9,4 +9,5 @@ public interface UsuarioRepository {
     List<Usuario> listarUsuarios();
     Usuario obtenerUsuario(String id);
     Usuario actualizarUsuario(Usuario usuario);
+    Usuario validarUsuario(String correo);
 }

@@ -18,6 +18,7 @@ import co.com.sofka.usecase.consulta.mascota.ListarMascotaUseCase;
 import co.com.sofka.usecase.consulta.usuario.ActualizarUsuarioUseCase;
 import co.com.sofka.usecase.consulta.usuario.CreateUsuarioUseCase;
 import co.com.sofka.usecase.consulta.usuario.ListarUsuarioIdUseCase;
+import co.com.sofka.usecase.consulta.usuario.ValidarUsuarioRegistradoUseCase;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
@@ -123,5 +124,9 @@ public class UseCasesConfig {
 
         public ActualizarDoctorUseCase actualizarDoctor(DoctorpokemonRepository doctorpokemonRepository){
                 return new ActualizarDoctorUseCase(doctorpokemonRepository);
+        }
+
+        public ValidarUsuarioRegistradoUseCase validarUsuarioRegistrado(UsuarioRepository usuarioRepository){
+                return new ValidarUsuarioRegistradoUseCase(usuarioRepository);
         }
 }
